@@ -1,0 +1,12 @@
+{
+	"extends": ["tslint:recommended", "tslint-config-prettier"],
+	"linterOptions": {
+		"exclude": ["node_modules/**/*.ts"]
+	},
+	"rules": {
+		"no-console": false,
+		"interface-name": false,
+		"variable-name": false,
+		"object-literal-sort-keys": false
+	}
+}
