@@ -7,6 +7,7 @@ class Wrapper extends React.Component<{}, {}> {
 		return (
 			<React.Fragment>
 				<Header />
+				{this.props.children}
 			</React.Fragment>
 		);
 	}

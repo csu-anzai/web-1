@@ -1,10 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
 
 body {
 	margin: 0;
-	font-family: 'Oxygen', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	background: #FEFEFE !important;
+	font-family: 'Oxygen', sans-serif !important;
+	background: rgba(174, 164, 239, 0.10) !important;
 	overflow: hidden;
+}
+
+button {
+	padding: 18px 50px !important;
+	border-radius: 0 !important;
+	font-family: 'Abel', sans-serif !important;
+	font-size: 17px !important;
+}
+
+.purple {
+	background: rgb(117, 69, 194) !important;
+	-webkit-box-shadow: 7px 7px 0px 0px rgba(117,69,194,0.31) !important;
+	-moz-box-shadow: 7px 7px 0px 0px rgba(117,69,194,0.31) !important;
+	box-shadow: 7px 7px 0px 0px rgba(117,69,194,0.31) !important;
 }
