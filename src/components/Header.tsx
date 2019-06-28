@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import { Button, Container, Image } from 'semantic-ui-react';
+import { Container, Image } from 'semantic-ui-react';
 
 import * as logo from '../assets/brand/logoicon.png';
 
@@ -19,17 +19,27 @@ const HeaderContainer = styled.div`
 
 const Logo = styled(Image)`
 	padding-top: 15px;
+	float: left;
 `;
 
-const QuoteButton = styled(Button)`
-	border-radius: 0 !important;
-	background: rgb(100, 110, 199) !important;
-	color: #fff !important;
-	height: 50px !important;
-	padding: 0 30px !important;
-	border-bottom-left-radius: 100px !important;
-	border-top-left-radius: 100px !important;
-	margin-top: 25px !important;
+const Nav = styled.div`
+	float: right;
+
+	& li {
+		display: inline-block;
+		list-style: none;
+	}
+
+	& li a {
+		padding: 15px 25px;
+		background: #fff;
+		color: #000 !important;
+	}
+
+	& li a:hover {
+		background: rgb(117, 69, 194);
+		color: #fff !important;
+	}
 `;
 
 class Header extends React.Component<{}, {}> {
@@ -39,6 +49,12 @@ class Header extends React.Component<{}, {}> {
 				<HeaderContainer>
 					<Container fluid={true}>
 						<Logo src={logo} width={70} />
+						<Nav>
+							<li>
+								<a href="/">Portfolio</a>
+								<a href="/">About Us</a>
+							</li>
+						</Nav>
 					</Container>
 				</HeaderContainer>
 			</HeaderWrapper>
