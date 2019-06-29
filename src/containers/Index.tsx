@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Button, Grid, Icon, Divider } from 'semantic-ui-react';
 
 const Jumbotron = styled.div`
-	height: 600px;
+	height: 550px;
 `;
 
 const Content = styled.div`
@@ -17,7 +17,7 @@ const Content = styled.div`
 `;
 
 const Slogan = styled.div`
-	font-size: 50px;
+	font-size: 40px;
 	font-family: 'Abel', sans-serif;
 	display: block;
 	padding-top: 15%;
@@ -26,7 +26,7 @@ const Slogan = styled.div`
 `;
 
 const UnderSlogan = styled.div`
-	font-size: 20px;
+	font-size: 18px;
 	width: 70%;
 	margin: auto;
 	color: rgba(80, 74, 149, 1);
@@ -37,8 +37,17 @@ const JumbotronButtons = styled.div`
 	padding: 50px;
 `;
 
-const IndexPage = styled.div`
-	width: 80%;
+const ValuesContainer = styled.div`
+	width: 90%;
+	margin: auto;
+	background: #fff !important;
+	/* border-top-left-radius: 30px; */
+	/* border-top-right-radius: 30px; */
+`;
+
+const PortfolioContainer = styled.div`
+	margin-top: 50px !important;
+	width: 90%;
 	margin: auto;
 	background: #fff !important;
 	/* border-top-left-radius: 30px; */
@@ -52,7 +61,7 @@ const CenteredGridColumn = styled(Grid.Column)`
 `;
 
 const GridPadding = styled.div`
-	padding: 40px 60px;
+	padding: 60px 60px;
 
 	& div {
 		padding-top: 0px;
@@ -60,7 +69,7 @@ const GridPadding = styled.div`
 `;
 
 const Padding = styled.div`
-	padding: 30px;
+	padding: 50px 30px;
 `;
 
 const Heading = styled.div`
@@ -93,12 +102,12 @@ class Index extends React.Component<any, any> {
 						</JumbotronButtons>
 					</Content>
 				</Jumbotron>
-				<IndexPage>
+				<ValuesContainer>
 					<Grid columns="equal">
 						<CenteredGridColumn>
 							<GridPadding>
 								<Icon name="code" size="big" />
-								<h1>Elegant</h1>
+								<h2>Elegant</h2>
 								<div>
 									Lorem Ipsum is simply dummy text of the
 									printing and typesetting industry. Lorem
@@ -110,7 +119,7 @@ class Index extends React.Component<any, any> {
 						<CenteredGridColumn>
 							<GridPadding>
 								<Icon name="modx" size="big" />
-								<h1>Beautiful</h1>
+								<h2>Beautiful</h2>
 								<div>
 									Lorem Ipsum is simply dummy text of the
 									printing and typesetting industry. Lorem
@@ -122,7 +131,7 @@ class Index extends React.Component<any, any> {
 						<CenteredGridColumn>
 							<GridPadding>
 								<Icon name="bitcoin" size="big" />
-								<h1>Competetive Pricing</h1>
+								<h2>Competetive Pricing</h2>
 								<div>
 									Lorem Ipsum is simply dummy text of the
 									printing and typesetting industry. Lorem
@@ -132,9 +141,8 @@ class Index extends React.Component<any, any> {
 							</GridPadding>
 						</CenteredGridColumn>
 					</Grid>
-
-					<Divider />
-
+				</ValuesContainer>
+				<PortfolioContainer>
 					<Padding>
 						<Heading>
 							<h1>Portfolio</h1>
@@ -147,7 +155,7 @@ class Index extends React.Component<any, any> {
 							</Grid.Column>
 						</Grid>
 					</Padding>
-				</IndexPage>
+				</PortfolioContainer>
 			</React.Fragment>
 		);
 	}

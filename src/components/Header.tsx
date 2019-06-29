@@ -8,8 +8,8 @@ import * as logo from '../assets/brand/logoicon.png';
 
 const HeaderWrapper = styled.div`
 	background: rgba(255, 255, 255, 0.9);
-	line-height: 100px;
-	height: 100px;
+	line-height: 70px;
+	height: 70px;
 `;
 
 const HeaderContainer = styled.div`
@@ -18,7 +18,7 @@ const HeaderContainer = styled.div`
 `;
 
 const Logo = styled(Image)`
-	padding-top: 15px;
+	padding-top: 10px;
 	float: left;
 `;
 
@@ -48,7 +48,7 @@ class Header extends React.Component<{}, {}> {
 			<HeaderWrapper>
 				<HeaderContainer>
 					<Container fluid={true}>
-						<Logo src={logo} width={70} />
+						<Logo src={logo} width={50} />
 						<Nav>
 							<li>
 								<a href="/">Portfolio</a>
