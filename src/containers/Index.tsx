@@ -39,6 +39,7 @@ const SecondarySlogan = styled.div`
 const AboutContent = styled.div`
 	padding: 70px;
 	background: #fff !important;
+	box-shadow: 0 4px 10px -6px #eee !important;
 
 	& div.welcome {
 		width: 100%;
@@ -74,8 +75,22 @@ const PurpleIcon = styled(Icon)`
 `;
 
 const Portfolio = styled.div`
-	padding: 30px;
-	height: 500px;
+	margin-top: 50px !important;
+`;
+
+const PortfolioItem = styled.div`
+	background: #fff;
+	box-shadow: 0 4px 10px -6px #eee !important;
+	height: 300px;
+	width: 100%;
+`;
+
+const Contact = styled.div`
+	box-shadow: 0 4px 10px -6px #eee !important;
+	margin-top: 100px;
+	height: 700px;
+	background: #fff;
+	padding-top: 50px;
 `;
 
 class Index extends React.Component<any, any> {
@@ -141,8 +156,37 @@ class Index extends React.Component<any, any> {
 					</Container>
 				</AboutContent>
 				<Portfolio>
-					<Container />
+					<Container>
+						<h1>Portfolio</h1>
+						<Grid columns="equal">
+							<Grid.Column>
+								<PortfolioItem />
+							</Grid.Column>
+							<Grid.Column>
+								<PortfolioItem />
+							</Grid.Column>
+							<Grid.Column>
+								<PortfolioItem />
+							</Grid.Column>
+						</Grid>
+						<Grid columns="equal">
+							<Grid.Column>
+								<PortfolioItem />
+							</Grid.Column>
+							<Grid.Column>
+								<PortfolioItem />
+							</Grid.Column>
+							<Grid.Column>
+								<PortfolioItem />
+							</Grid.Column>
+						</Grid>
+					</Container>
 				</Portfolio>
+				<Contact>
+					<Container>
+						<h1>Contact Us</h1>
+					</Container>
+				</Contact>
 			</React.Fragment>
 		);
 	}
