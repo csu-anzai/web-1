@@ -1,28 +1,38 @@
 @import url('https://fonts.googleapis.com/css?family=Oxygen&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
 
 body {
 	margin: 0;
 	font-family: 'Oxygen', sans-serif !important;
-	background: rgba(174, 164, 239, 0.10) !important;
+	background: #FAFAFA !important;
 	font-size: 16px !important;
 }
 
 button {
-	padding: 18px 50px !important;
+	padding: 15px 50px !important;
 	border-radius: 0 !important;
-	font-family: 'Abel', sans-serif !important;
+	font-family: 'Titillium Web', sans-serif !important;
 	font-size: 17px !important;
+	border-radius: 5px !important;
+	box-shadow: 0 4px 20px -20px #111 !important;
+	font-weight: normal !important;
 }
 
-.purple {
-	background: rgb(117, 69, 194) !important;
-	-webkit-box-shadow: 5px 5px 0px 0px rgba(117,69,194,0.31) !important;
-	-moz-box-shadow: 5px 5px 0px 0px rgba(117,69,194,0.31) !important;
-	box-shadow: 5px 5px 0px 0px rgba(117,69,194,0.31) !important;
+.red {
+	background: #ed213a url(${bg}) !important;
+	background: -webkit-linear-gradient(to left, #ea384d, #d31027) !important;
+	background: linear-gradient(to left, #ea384d, #d31027) !important;
+	-webkit-box-shadow: 5px 5px 0px 0px rgba(255,255,255,0.31) !important;
+	-moz-box-shadow: 5px 5px 0px 0px rgba(255,255,255,0.31) !important;
+	box-shadow: 5px 5px 0px 0px rgba(255,255,255,0.31) !important;
+}
+
+.purple:hover {
+	background-position: right center;
 }
 
 h1, h2, h3, h4, h5 {
-	font-family: 'Abel', sans-serif !important;
+	font-family: 'Titillium Web', sans-serif !important;
+	color: #ed213a
 }

@@ -3,26 +3,28 @@ import styled from 'styled-components';
 
 import { Grid, Button, Container, Icon } from 'semantic-ui-react';
 
-import * as bg from '../assets/background.png';
+import * as bg from '../assets/wool.png';
 
 const Jumbotron = styled.div`
 	margin-top: -80px;
 	text-align: center !important;
 	padding-top: 15% !important;
 	padding-bottom: 15% !important;
-	background: url(${bg});
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
+
+	background: #ed213a url(${bg}) !important;
+
 	color: #eee !important;
+	box-shadow: 0px 100px 100px -70px #000 inset;
+	z-index: 10000;
 `;
 
 const Slogan = styled.div`
 	width: 70% !important;
 	margin: auto;
+	text-shadow: 1px 1px #444 !important;
 	font-size: 45px;
 	/* font-family: 'Dancing Script', cursive; */
-	font-family: 'Abel', sans-serif;
+	font-family: 'Titillium Web', sans-serif;
 	display: block;
 	margin-bottom: 40px;
 	font-weight: bold;
@@ -37,6 +39,7 @@ const SecondarySlogan = styled.div`
 `;
 
 const AboutContent = styled.div`
+	z-index: 1;
 	padding: 70px;
 	background: #fff !important;
 	box-shadow: 0 4px 10px -6px #eee !important;
@@ -44,7 +47,7 @@ const AboutContent = styled.div`
 	& div.welcome {
 		width: 100%;
 		text-align: center;
-		color: rgb(117, 69, 194) !important;
+		color: #d31027 !important;
 		font-family: 'Abel', sans-serif;
 		font-size: 20px;
 	}
@@ -71,7 +74,7 @@ const GridPadding = styled.div`
 `;
 
 const PurpleIcon = styled(Icon)`
-	color: rgb(117, 69, 194) !important;
+	color: #ed213a !important;
 `;
 
 const Portfolio = styled.div`
@@ -93,6 +96,33 @@ const Contact = styled.div`
 	padding-top: 50px;
 `;
 
+const Values = styled.div`
+	padding: 100px;
+	background: #fff !important;
+	box-shadow: 0 4px 10px -6px #eee !important;
+
+	& div.welcome {
+		width: 100%;
+		text-align: center;
+		color: #d31027 !important;
+		font-family: 'Abel', sans-serif;
+		font-size: 20px;
+	}
+
+	h1 {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	& p {
+		text-align: center;
+	}
+`;
+
+const Value = styled(Container)`
+	padding: 100px;
+`;
+
 class Index extends React.Component<any, any> {
 	public render() {
 		return (
@@ -103,58 +133,79 @@ class Index extends React.Component<any, any> {
 						Lorem Ipsum is simply dummy text of the printing and
 						typesetting industry
 					</SecondarySlogan>
-					<Button color="purple" content="Get A Quote" />
+					<Button content="Get A Quote" />
 				</Jumbotron>
-				<AboutContent>
-					<Container fluid={false}>
-						<div className="welcome">Welcome to Us</div>
-						<h1>Top Consulting Agency</h1>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit. Etiam non dolor eros. Praesent ut tempor elit.
-							Suspendisse convallis mauris sapien, nec consequat
-							arcu bibendum sed. Nec consequat arcu bibendum sed.
-						</p>
+				<Values>
+					<Value>
 						<Grid columns="equal">
-							<CenteredGridColumn>
-								<GridPadding>
-									<PurpleIcon name="code" size="big" />
-									<h2>Elegant</h2>
-									<div>
-										Lorem Ipsum is simply dummy text of the
-										printing and typesetting industry. Lorem
-										Ipsum is simply dummy text of the
-										printing and typesetting industry.
-									</div>
-								</GridPadding>
-							</CenteredGridColumn>
-							<CenteredGridColumn>
-								<GridPadding>
-									<PurpleIcon name="modx" size="big" />
-									<h2>Beautiful</h2>
-									<div>
-										Lorem Ipsum is simply dummy text of the
-										printing and typesetting industry. Lorem
-										Ipsum is simply dummy text of the
-										printing and typesetting industry.
-									</div>
-								</GridPadding>
-							</CenteredGridColumn>
-							<CenteredGridColumn>
-								<GridPadding>
-									<PurpleIcon name="bitcoin" size="big" />
-									<h2>Competetive Pricing</h2>
-									<div>
-										Lorem Ipsum is simply dummy text of the
-										printing and typesetting industry. Lorem
-										Ipsum is simply dummy text of the
-										printing and typesetting industry.
-									</div>
-								</GridPadding>
-							</CenteredGridColumn>
+							<Grid.Column width={3}>
+								<PurpleIcon name="pen square" size="massive" />
+							</Grid.Column>
+							<Grid.Column>
+								<h2>Beautiful</h2>
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit. Etiam non dolor eros. Praesent
+								ut tempor elit. Suspendisse convallis mauris
+								sapien, nec consequat arcu bibendum sed. Nec
+								consequat arcu bibendum sed. Lorem ipsum dolor
+								sit amet, consectetur adipiscing elit.
+								<br />
+								<br />
+								Etiam non dolor eros. Praesent ut tempor elit.
+								Suspendisse convallis mauris sapien, nec
+								consequat arcu bibendum sed. Nec consequat arcu
+								bibendum sed.
+							</Grid.Column>
 						</Grid>
-					</Container>
-				</AboutContent>
+					</Value>
+
+					<Value>
+						<Grid columns="equal">
+							<Grid.Column>
+								<h2>Competetive Pricing</h2>
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit. Etiam non dolor eros. Praesent
+								ut tempor elit. Suspendisse convallis mauris
+								sapien, nec consequat arcu bibendum sed. Nec
+								consequat arcu bibendum sed. Lorem ipsum dolor
+								sit amet, consectetur adipiscing elit.
+								<br />
+								<br />
+								Etiam non dolor eros. Praesent ut tempor elit.
+								Suspendisse convallis mauris sapien, nec
+								consequat arcu bibendum sed. Nec consequat arcu
+								bibendum sed.
+							</Grid.Column>
+							<Grid.Column width={3}>
+								<PurpleIcon name="bitcoin" size="massive" />
+							</Grid.Column>
+						</Grid>
+					</Value>
+
+					<Value>
+						<Grid columns="equal">
+							<Grid.Column width={3}>
+								<PurpleIcon name="chess queen" size="massive" />
+							</Grid.Column>
+							<Grid.Column>
+								<h2>Elegant</h2>
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit. Etiam non dolor eros. Praesent
+								ut tempor elit. Suspendisse convallis mauris
+								sapien, nec consequat arcu bibendum sed. Nec
+								consequat arcu bibendum sed. Lorem ipsum dolor
+								sit amet, consectetur adipiscing elit.
+								<br />
+								<br />
+								Etiam non dolor eros. Praesent ut tempor elit.
+								Suspendisse convallis mauris sapien, nec
+								consequat arcu bibendum sed. Nec consequat arcu
+								bibendum sed.
+							</Grid.Column>
+						</Grid>
+					</Value>
+				</Values>
+
 				<Portfolio>
 					<Container>
 						<h1>Portfolio</h1>
