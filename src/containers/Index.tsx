@@ -48,7 +48,7 @@ const Portfolio = styled.div`
 const PortfolioItem = styled.div`
 	background: #fff;
 	box-shadow: 0 4px 10px -6px #eee !important;
-	height: 300px;
+	height: 350px;
 	width: 100%;
 `;
 
@@ -61,7 +61,7 @@ const Contact = styled.div`
 `;
 
 const Values = styled.div`
-	padding: 100px;
+	padding: 50px 0;
 	background: #fff !important;
 	box-shadow: 0 4px 10px -6px #eee !important;
 
