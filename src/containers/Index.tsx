@@ -8,8 +8,8 @@ import * as bg from '../assets/wool.png';
 const Jumbotron = styled.div`
 	margin-top: -80px;
 	text-align: center !important;
-	padding-top: 15% !important;
-	padding-bottom: 15% !important;
+	padding-top: 16% !important;
+	padding-bottom: 16% !important;
 
 	background: #ed213a url(${bg}) !important;
 
@@ -23,8 +23,7 @@ const Slogan = styled.div`
 	margin: auto;
 	text-shadow: 1px 1px #444 !important;
 	font-size: 45px;
-	/* font-family: 'Dancing Script', cursive; */
-	font-family: 'Titillium Web', sans-serif;
+	font-family: 'Abel', sans-serif;
 	display: block;
 	margin-bottom: 40px;
 	font-weight: bold;
@@ -38,42 +37,7 @@ const SecondarySlogan = styled.div`
 	font-weight: bold;
 `;
 
-const AboutContent = styled.div`
-	z-index: 1;
-	padding: 70px;
-	background: #fff !important;
-	box-shadow: 0 4px 10px -6px #eee !important;
-
-	& div.welcome {
-		width: 100%;
-		text-align: center;
-		color: #d31027 !important;
-		font-family: 'Abel', sans-serif;
-		font-size: 20px;
-	}
-
-	h1 {
-		text-align: center;
-		margin-bottom: 30px;
-	}
-
-	& p {
-		text-align: center;
-	}
-`;
-
-const CenteredGridColumn = styled(Grid.Column)`
-	text-align: center;
-`;
-
-const GridPadding = styled.div`
-	padding: 60px 0;
-	& div {
-		padding-top: 0px;
-	}
-`;
-
-const PurpleIcon = styled(Icon)`
+const ColouredIcon = styled(Icon)`
 	color: #ed213a !important;
 `;
 
@@ -91,7 +55,7 @@ const PortfolioItem = styled.div`
 const Contact = styled.div`
 	box-shadow: 0 4px 10px -6px #eee !important;
 	margin-top: 100px;
-	height: 700px;
+	height: 300px;
 	background: #fff;
 	padding-top: 50px;
 `;
@@ -139,7 +103,10 @@ class Index extends React.Component<any, any> {
 					<Value>
 						<Grid columns="equal">
 							<Grid.Column width={3}>
-								<PurpleIcon name="pen square" size="massive" />
+								<ColouredIcon
+									name="pen square"
+									size="massive"
+								/>
 							</Grid.Column>
 							<Grid.Column>
 								<h2>Beautiful</h2>
@@ -177,7 +144,7 @@ class Index extends React.Component<any, any> {
 								bibendum sed.
 							</Grid.Column>
 							<Grid.Column width={3}>
-								<PurpleIcon name="bitcoin" size="massive" />
+								<ColouredIcon name="bitcoin" size="massive" />
 							</Grid.Column>
 						</Grid>
 					</Value>
@@ -185,7 +152,10 @@ class Index extends React.Component<any, any> {
 					<Value>
 						<Grid columns="equal">
 							<Grid.Column width={3}>
-								<PurpleIcon name="chess queen" size="massive" />
+								<ColouredIcon
+									name="chess queen"
+									size="massive"
+								/>
 							</Grid.Column>
 							<Grid.Column>
 								<h2>Elegant</h2>

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Container } from 'semantic-ui-react';
+import { Container, Icon } from 'semantic-ui-react';
 
 const FooterWrapper = styled.div`
 	background: #d31027 !important;
@@ -12,11 +12,24 @@ const FooterWrapper = styled.div`
 	width: 100%;
 `;
 
+const Copyright = styled.div`
+	float: right;
+	color: #fff;
+	font-size: 14px;
+`;
+
 class Header extends React.Component<{}, {}> {
 	public render() {
 		return (
 			<React.Fragment>
-				<FooterWrapper />
+				<FooterWrapper>
+					<Container>
+						<Copyright>
+							App Maven <Icon name="copyright outline" /> All
+							Rights Reserved
+						</Copyright>
+					</Container>
+				</FooterWrapper>
 			</React.Fragment>
 		);
 	}
