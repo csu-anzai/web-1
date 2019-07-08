@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Grid, Button, Container, Icon } from 'semantic-ui-react';
 
-import * as bg from '../assets/wool.png';
+import * as bg from '../assets/cubes.png';
 
 const Jumbotron = styled.div`
 	margin-top: -80px;
