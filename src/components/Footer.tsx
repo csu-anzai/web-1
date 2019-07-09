@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Container, Icon } from 'semantic-ui-react';
 
 const FooterWrapper = styled.div`
-	background: #d31027 !important;
+	background: #aa251c !important;
 	background: -webkit-linear-gradient(to left, #ea384d, #d31027);
 	background: linear-gradient(to left, #ea384d, #d31027);
 	line-height: 60px;

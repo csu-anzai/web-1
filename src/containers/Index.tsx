@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Grid, Button, Container, Icon } from 'semantic-ui-react';
 
-import * as bg from '../assets/cubes.png';
+import * as bg from '../assets/bg1.jpeg';
 
 const Jumbotron = styled.div`
 	margin-top: -80px;
@@ -11,10 +11,11 @@ const Jumbotron = styled.div`
 	padding-top: 16% !important;
 	padding-bottom: 16% !important;
 
-	background: #ed213a url(${bg}) !important;
+	background: #aa251c url(${bg}) !important;
+	background-size: 100% !important;
+	box-shadow: 0px 100px 100px -90px #000 inset;
 
 	color: #eee !important;
-	box-shadow: 0px 100px 100px -70px #000 inset;
 	z-index: 10000;
 `;
 
@@ -38,7 +39,7 @@ const SecondarySlogan = styled.div`
 `;
 
 const ColouredIcon = styled(Icon)`
-	color: #ed213a !important;
+	color: #aa251c !important;
 `;
 
 const Portfolio = styled.div`
