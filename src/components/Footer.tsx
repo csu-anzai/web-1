@@ -1,76 +1,38 @@
 import React from 'react';
-
 import styled from 'styled-components';
-import { Container, Icon, Grid, Image } from 'semantic-ui-react';
 
-const FooterPadding = styled.div`
-	padding-left: 20px;
-	padding-right: 20px;
-`;
+import { Container, Icon } from 'semantic-ui-react';
 
-const FooterContainer = styled.div`
+const FooterWrapper = styled.div`
+	background: #aa251c !important;
+	background: -webkit-linear-gradient(to left, #ea384d, #d31027);
+	background: linear-gradient(to left, #ea384d, #d31027);
+	line-height: 60px;
+	height: 60px;
 	width: 100%;
-	background: #fefefe;
-	height: 300px;
-	margin-top: 100px;
 `;
 
-const Padding = styled.div`
-	padding: 20px;
-`;
-
-const UnderFooter = styled.div`
-	height: 70px;
-	width: 100%;
-	background: rgb(117, 69, 194);
-	color: #fff;
-	line-height: 70px;
-`;
-
-const Left = styled.div`
-	float: left;
-`;
-
-const Right = styled.div`
+const Copyright = styled.div`
 	float: right;
+	color: #fff;
+	font-size: 14px;
 `;
 
-class Footer extends React.Component<{}, {}> {
+class Header extends React.Component<{}, {}> {
 	public render() {
 		return (
 			<React.Fragment>
-				<FooterContainer>
-					<Padding>
-						<Grid columns="equal">
-							<Grid.Column>
-								<Image src="" />
-							</Grid.Column>
-							<Grid.Column>
-								<h3>Address</h3>
-							</Grid.Column>
-							<Grid.Column>
-								<h3>Contact Details</h3>
-							</Grid.Column>
-							<Grid.Column>
-								<h3>Contact Us</h3>
-							</Grid.Column>
-						</Grid>
-					</Padding>
-				</FooterContainer>
-				<UnderFooter>
-					<FooterPadding>
-						<Container fluid={true}>
-							<Left>
-								App Maven <Icon name="copyright outline" />{' '}
-								2019. All Rights Reserved.
-							</Left>
-							<Right>Contact Us</Right>
-						</Container>
-					</FooterPadding>
-				</UnderFooter>
+				<FooterWrapper>
+					<Container>
+						<Copyright>
+							App Maven <Icon name="copyright outline" /> All
+							Rights Reserved
+						</Copyright>
+					</Container>
+				</FooterWrapper>
 			</React.Fragment>
 		);
 	}
 }
 
-export default Footer;
+export default Header;

@@ -1,161 +1,221 @@
 import React from 'react';
-
 import styled from 'styled-components';
 
-import { Button, Grid, Icon, Divider } from 'semantic-ui-react';
+import { Spring, config } from 'react-spring/renderprops';
+import { Grid, Button, Container } from 'semantic-ui-react';
+
+import Value from '../components/Value';
+
+import * as bg from '../assets/cubes.png';
 
 const Jumbotron = styled.div`
-	height: 550px;
-`;
+	margin-top: -80px;
+	text-align: center !important;
+	padding-top: 16% !important;
+	padding-bottom: 16% !important;
 
-const Content = styled.div`
-	margin: auto !important;
-	text-align: center;
-	height: 100%;
-	width: 60%;
-	line-height: 1.3;
+	background: #aa251c url(${bg}) !important;
+	/* background-size: 100% !important; */
+	box-shadow: 0px 100px 100px -90px #000 inset;
+
+	color: #eee !important;
+	z-index: 10000;
 `;
 
 const Slogan = styled.div`
-	font-size: 40px;
+	width: 70% !important;
+	margin: auto;
+	text-shadow: 1px 1px #444 !important;
+	font-size: 45px;
 	font-family: 'Abel', sans-serif;
 	display: block;
-	padding-top: 15%;
 	margin-bottom: 40px;
 	font-weight: bold;
 `;
 
-const UnderSlogan = styled.div`
-	font-size: 18px;
-	width: 70%;
-	margin: auto;
-	color: rgba(80, 74, 149, 1);
-	font-family: 'Oxygen', sans-serif;
+const SecondarySlogan = styled.div`
+	font-size: 20px;
+	font-family: 'Abel', sans-serif;
+	display: block;
+	margin-bottom: 40px;
+	font-weight: bold;
 `;
 
-const JumbotronButtons = styled.div`
-	padding: 50px;
-`;
-
-const ValuesContainer = styled.div`
-	width: 90%;
-	margin: auto;
-	background: #fff !important;
-	/* border-top-left-radius: 30px; */
-	/* border-top-right-radius: 30px; */
-`;
-
-const PortfolioContainer = styled.div`
+const Portfolio = styled.div`
 	margin-top: 50px !important;
-	width: 90%;
-	margin: auto;
-	background: #fff !important;
-	/* border-top-left-radius: 30px; */
-	/* border-top-right-radius: 30px; */
-`;
-
-const CenteredGridColumn = styled(Grid.Column)`
-	text-align: center;
-	/* background: red; */
-	/* border-right: 1px solid white; */
-`;
-
-const GridPadding = styled.div`
-	padding: 60px 60px;
-
-	& div {
-		padding-top: 0px;
-	}
-`;
-
-const Padding = styled.div`
-	padding: 50px 30px;
-`;
-
-const Heading = styled.div`
-	text-align: center;
 `;
 
 const PortfolioItem = styled.div`
+	background: #fff;
+	box-shadow: 0 4px 10px -6px #eee !important;
+	height: 350px;
 	width: 100%;
-	height: 100%;
-	background: #fafafa;
-	padding: 20px;
-	height: 400px;
 `;
+
+const Contact = styled.div`
+	box-shadow: 0 4px 10px -6px #eee !important;
+	margin-top: 100px;
+	height: 300px;
+	background: #fff;
+	padding-top: 50px;
+`;
+
+const Values = styled.div`
+	padding: 50px 0;
+	background: #fff !important;
+	box-shadow: 0 4px 10px -6px #eee !important;
+
+	& div.welcome {
+		width: 100%;
+		text-align: center;
+		color: #d31027 !important;
+		font-family: 'Abel', sans-serif;
+		font-size: 20px;
+	}
+
+	h1 {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	& p {
+		text-align: center;
+	}
+`;
+
+interface IValue {
+	icon: string;
+	heading: string;
+	content: string;
+	iconPosition: 'left' | 'right';
+}
 
 class Index extends React.Component<any, any> {
 	public render() {
+		const values: IValue[] = [
+			{
+				icon: 'pen square',
+				heading: 'Beautiful',
+				content: `Lorem ipsum dolor sit amet, consectetur
+				adipiscing elit. Etiam non dolor eros. Praesent
+				ut tempor elit. Suspendisse convallis mauris
+				sapien, nec consequat arcu bibendum sed. Nec
+				consequat arcu bibendum sed. Lorem ipsum dolor
+				sit amet, consectetur adipiscing elit.
+				<br />
+				<br />
+				Etiam non dolor eros. Praesent ut tempor elit.
+				Suspendisse convallis mauris sapien, nec
+				consequat arcu bibendum sed. Nec consequat arcu
+				bibendum sed.`,
+				iconPosition: 'left'
+			},
+			{
+				icon: 'bitcoin',
+				heading: 'Competetive Pricing',
+				content: `Lorem ipsum dolor sit amet, consectetur
+				adipiscing elit. Etiam non dolor eros. Praesent
+				ut tempor elit. Suspendisse convallis mauris
+				sapien, nec consequat arcu bibendum sed. Nec
+				consequat arcu bibendum sed. Lorem ipsum dolor
+				sit amet, consectetur adipiscing elit.
+				<br />
+				<br />
+				Etiam non dolor eros. Praesent ut tempor elit.
+				Suspendisse convallis mauris sapien, nec
+				consequat arcu bibendum sed. Nec consequat arcu
+				bibendum sed.`,
+				iconPosition: 'right'
+			},
+			{
+				icon: 'circle',
+				heading: 'Elegant',
+				content: `Lorem ipsum dolor sit amet, consectetur
+				adipiscing elit. Etiam non dolor eros. Praesent
+				ut tempor elit. Suspendisse convallis mauris
+				sapien, nec consequat arcu bibendum sed. Nec
+				consequat arcu bibendum sed. Lorem ipsum dolor
+				sit amet, consectetur adipiscing elit.
+				<br />
+				<br />
+				Etiam non dolor eros. Praesent ut tempor elit.
+				Suspendisse convallis mauris sapien, nec
+				consequat arcu bibendum sed. Nec consequat arcu
+				bibendum sed.`,
+				iconPosition: 'left'
+			}
+		];
+
 		return (
 			<React.Fragment>
 				<Jumbotron>
-					<Content>
-						<Slogan>
-							Beautiful & Elegant Consulting Solutions
-						</Slogan>
-						<UnderSlogan>
-							Lorem Ipsum is simply dummy text of the printing and
-							typesetting industry. Welcome to App Maven!
-						</UnderSlogan>
-						<JumbotronButtons>
-							<Button color="purple" content="Get A Quote" />
-						</JumbotronButtons>
-					</Content>
+					<Spring
+						from={{ opacity: 0, marginTop: 100 }}
+						to={{ opacity: 1, marginTop: 0 }}
+						config={config.molasses}
+					>
+						{props => (
+							<Slogan style={props}>
+								Beautiful & Elegant Consulting Solutions
+							</Slogan>
+						)}
+					</Spring>
+					<Spring
+						from={{ opacity: 0, marginTop: 100 }}
+						to={{ opacity: 1, marginTop: 0 }}
+						config={config.molasses}
+					>
+						{props => (
+							<SecondarySlogan style={props}>
+								Lorem Ipsum is simply dummy text of the printing
+								and typesetting industry
+							</SecondarySlogan>
+						)}
+					</Spring>
+					<Button content="Get A Quote" />
 				</Jumbotron>
-				<ValuesContainer>
-					<Grid columns="equal">
-						<CenteredGridColumn>
-							<GridPadding>
-								<Icon name="code" size="big" />
-								<h2>Elegant</h2>
-								<div>
-									Lorem Ipsum is simply dummy text of the
-									printing and typesetting industry. Lorem
-									Ipsum is simply dummy text of the printing
-									and typesetting industry.
-								</div>
-							</GridPadding>
-						</CenteredGridColumn>
-						<CenteredGridColumn>
-							<GridPadding>
-								<Icon name="modx" size="big" />
-								<h2>Beautiful</h2>
-								<div>
-									Lorem Ipsum is simply dummy text of the
-									printing and typesetting industry. Lorem
-									Ipsum is simply dummy text of the printing
-									and typesetting industry.
-								</div>
-							</GridPadding>
-						</CenteredGridColumn>
-						<CenteredGridColumn>
-							<GridPadding>
-								<Icon name="bitcoin" size="big" />
-								<h2>Competetive Pricing</h2>
-								<div>
-									Lorem Ipsum is simply dummy text of the
-									printing and typesetting industry. Lorem
-									Ipsum is simply dummy text of the printing
-									and typesetting industry.
-								</div>
-							</GridPadding>
-						</CenteredGridColumn>
-					</Grid>
-				</ValuesContainer>
-				<PortfolioContainer>
-					<Padding>
-						<Heading>
-							<h1>Portfolio</h1>
-						</Heading>
-						<br />
-						<br />
+				<Values>
+					{values.map(value => (
+						<Value
+							icon={value.icon}
+							heading={value.heading}
+							content={value.content}
+							iconPosition={value.iconPosition}
+						/>
+					))}
+				</Values>
+				<Portfolio>
+					<Container>
+						<h1>Portfolio</h1>
 						<Grid columns="equal">
 							<Grid.Column>
 								<PortfolioItem />
 							</Grid.Column>
+							<Grid.Column>
+								<PortfolioItem />
+							</Grid.Column>
+							<Grid.Column>
+								<PortfolioItem />
+							</Grid.Column>
 						</Grid>
-					</Padding>
-				</PortfolioContainer>
+						<Grid columns="equal">
+							<Grid.Column>
+								<PortfolioItem />
+							</Grid.Column>
+							<Grid.Column>
+								<PortfolioItem />
+							</Grid.Column>
+							<Grid.Column>
+								<PortfolioItem />
+							</Grid.Column>
+						</Grid>
+					</Container>
+				</Portfolio>
+				<Contact>
+					<Container>
+						<h1>Contact Us</h1>
+					</Container>
+				</Contact>
 			</React.Fragment>
 		);
 	}
