@@ -3,7 +3,7 @@
 This repository holds the source files for [appmaven.io](http://appmaven.io).
 
 
-# Installation
+## Installation
 
 Firstly install `yarn`
 
