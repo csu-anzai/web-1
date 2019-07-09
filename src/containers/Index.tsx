@@ -1,9 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Grid, Button, Container, Icon } from 'semantic-ui-react';
+import { Spring, config } from 'react-spring/renderprops';
+import { Grid, Button, Container } from 'semantic-ui-react';
 
-import * as bg from '../assets/bg1.jpeg';
+import Value from '../components/Value';
+
+import * as bg from '../assets/cubes.png';
 
 const Jumbotron = styled.div`
 	margin-top: -80px;
@@ -12,7 +15,7 @@ const Jumbotron = styled.div`
 	padding-bottom: 16% !important;
 
 	background: #aa251c url(${bg}) !important;
-	background-size: 100% !important;
+	/* background-size: 100% !important; */
 	box-shadow: 0px 100px 100px -90px #000 inset;
 
 	color: #eee !important;
@@ -36,10 +39,6 @@ const SecondarySlogan = styled.div`
 	display: block;
 	margin-bottom: 40px;
 	font-weight: bold;
-`;
-
-const ColouredIcon = styled(Icon)`
-	color: #aa251c !important;
 `;
 
 const Portfolio = styled.div`
@@ -84,99 +83,107 @@ const Values = styled.div`
 	}
 `;
 
-const Value = styled(Container)`
-	padding: 100px;
-`;
+interface IValue {
+	icon: string;
+	heading: string;
+	content: string;
+	iconPosition: 'left' | 'right';
+}
 
 class Index extends React.Component<any, any> {
 	public render() {
+		const values: IValue[] = [
+			{
+				icon: 'pen square',
+				heading: 'Beautiful',
+				content: `Lorem ipsum dolor sit amet, consectetur
+				adipiscing elit. Etiam non dolor eros. Praesent
+				ut tempor elit. Suspendisse convallis mauris
+				sapien, nec consequat arcu bibendum sed. Nec
+				consequat arcu bibendum sed. Lorem ipsum dolor
+				sit amet, consectetur adipiscing elit.
+				<br />
+				<br />
+				Etiam non dolor eros. Praesent ut tempor elit.
+				Suspendisse convallis mauris sapien, nec
+				consequat arcu bibendum sed. Nec consequat arcu
+				bibendum sed.`,
+				iconPosition: 'left'
+			},
+			{
+				icon: 'bitcoin',
+				heading: 'Competetive Pricing',
+				content: `Lorem ipsum dolor sit amet, consectetur
+				adipiscing elit. Etiam non dolor eros. Praesent
+				ut tempor elit. Suspendisse convallis mauris
+				sapien, nec consequat arcu bibendum sed. Nec
+				consequat arcu bibendum sed. Lorem ipsum dolor
+				sit amet, consectetur adipiscing elit.
+				<br />
+				<br />
+				Etiam non dolor eros. Praesent ut tempor elit.
+				Suspendisse convallis mauris sapien, nec
+				consequat arcu bibendum sed. Nec consequat arcu
+				bibendum sed.`,
+				iconPosition: 'right'
+			},
+			{
+				icon: 'circle',
+				heading: 'Elegant',
+				content: `Lorem ipsum dolor sit amet, consectetur
+				adipiscing elit. Etiam non dolor eros. Praesent
+				ut tempor elit. Suspendisse convallis mauris
+				sapien, nec consequat arcu bibendum sed. Nec
+				consequat arcu bibendum sed. Lorem ipsum dolor
+				sit amet, consectetur adipiscing elit.
+				<br />
+				<br />
+				Etiam non dolor eros. Praesent ut tempor elit.
+				Suspendisse convallis mauris sapien, nec
+				consequat arcu bibendum sed. Nec consequat arcu
+				bibendum sed.`,
+				iconPosition: 'left'
+			}
+		];
+
 		return (
 			<React.Fragment>
 				<Jumbotron>
-					<Slogan>Beautiful & Elegant Consulting Solutions</Slogan>
-					<SecondarySlogan>
-						Lorem Ipsum is simply dummy text of the printing and
-						typesetting industry
-					</SecondarySlogan>
+					<Spring
+						from={{ opacity: 0, marginTop: 100 }}
+						to={{ opacity: 1, marginTop: 0 }}
+						config={config.molasses}
+					>
+						{props => (
+							<Slogan style={props}>
+								Beautiful & Elegant Consulting Solutions
+							</Slogan>
+						)}
+					</Spring>
+					<Spring
+						from={{ opacity: 0, marginTop: 100 }}
+						to={{ opacity: 1, marginTop: 0 }}
+						config={config.molasses}
+					>
+						{props => (
+							<SecondarySlogan style={props}>
+								Lorem Ipsum is simply dummy text of the printing
+								and typesetting industry
+							</SecondarySlogan>
+						)}
+					</Spring>
 					<Button content="Get A Quote" />
 				</Jumbotron>
 				<Values>
-					<Value>
-						<Grid columns="equal">
-							<Grid.Column width={3}>
-								<ColouredIcon
-									name="pen square"
-									size="massive"
-								/>
-							</Grid.Column>
-							<Grid.Column>
-								<h2>Beautiful</h2>
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit. Etiam non dolor eros. Praesent
-								ut tempor elit. Suspendisse convallis mauris
-								sapien, nec consequat arcu bibendum sed. Nec
-								consequat arcu bibendum sed. Lorem ipsum dolor
-								sit amet, consectetur adipiscing elit.
-								<br />
-								<br />
-								Etiam non dolor eros. Praesent ut tempor elit.
-								Suspendisse convallis mauris sapien, nec
-								consequat arcu bibendum sed. Nec consequat arcu
-								bibendum sed.
-							</Grid.Column>
-						</Grid>
-					</Value>
-
-					<Value>
-						<Grid columns="equal">
-							<Grid.Column>
-								<h2>Competetive Pricing</h2>
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit. Etiam non dolor eros. Praesent
-								ut tempor elit. Suspendisse convallis mauris
-								sapien, nec consequat arcu bibendum sed. Nec
-								consequat arcu bibendum sed. Lorem ipsum dolor
-								sit amet, consectetur adipiscing elit.
-								<br />
-								<br />
-								Etiam non dolor eros. Praesent ut tempor elit.
-								Suspendisse convallis mauris sapien, nec
-								consequat arcu bibendum sed. Nec consequat arcu
-								bibendum sed.
-							</Grid.Column>
-							<Grid.Column width={3}>
-								<ColouredIcon name="bitcoin" size="massive" />
-							</Grid.Column>
-						</Grid>
-					</Value>
-
-					<Value>
-						<Grid columns="equal">
-							<Grid.Column width={3}>
-								<ColouredIcon
-									name="chess queen"
-									size="massive"
-								/>
-							</Grid.Column>
-							<Grid.Column>
-								<h2>Elegant</h2>
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit. Etiam non dolor eros. Praesent
-								ut tempor elit. Suspendisse convallis mauris
-								sapien, nec consequat arcu bibendum sed. Nec
-								consequat arcu bibendum sed. Lorem ipsum dolor
-								sit amet, consectetur adipiscing elit.
-								<br />
-								<br />
-								Etiam non dolor eros. Praesent ut tempor elit.
-								Suspendisse convallis mauris sapien, nec
-								consequat arcu bibendum sed. Nec consequat arcu
-								bibendum sed.
-							</Grid.Column>
-						</Grid>
-					</Value>
+					{values.map(value => (
+						<Value
+							icon={value.icon}
+							heading={value.heading}
+							content={value.content}
+							iconPosition={value.iconPosition}
+						/>
+					))}
 				</Values>
-
 				<Portfolio>
 					<Container>
 						<h1>Portfolio</h1>
