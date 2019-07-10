@@ -28,14 +28,14 @@ const Socials = styled.div`
 	}
 
 	& a:hover {
-		color: #3a1c71 !important;
+		/* color: #3a1c71 !important;
 		color: -webkit-linear-gradient(
 			to right,
 			#3a1c71,
 			#d76d77,
 			#ffaf7b
 		) !important;
-		color: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b) !important;
+		color: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b) !important; */
 	}
 `;
 
