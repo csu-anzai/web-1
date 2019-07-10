@@ -40,6 +40,12 @@ class Value extends React.Component<Props, {}> {
 							<Grid.Column>
 								<h2>{heading}</h2>
 								{content}
+								<br />
+								<br />
+								Etiam non dolor eros. Praesent ut tempor elit.
+								Suspendisse convallis mauris sapien, nec
+								consequat arcu bibendum sed. Nec consequat arcu
+								bibendum sed.
 							</Grid.Column>
 							{iconPosition === 'right' ? (
 								<Grid.Column width={3}>

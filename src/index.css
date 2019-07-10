@@ -4,7 +4,11 @@
 body {
 	margin: 0;
 	font-family: 'Oxygen', sans-serif !important;
-	background: #FAFAFA !important;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: #f4f5f7 !important;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 
 button {
@@ -21,15 +25,19 @@ button {
 	background: #ed213a url(${bg}) !important;
 	background: -webkit-linear-gradient(to left, #ea384d, #d31027) !important;
 	background: linear-gradient(to left, #ea384d, #d31027) !important;
-	-webkit-box-shadow: 5px 5px 0px 0px rgba(255,255,255,0.31) !important;
-	-moz-box-shadow: 5px 5px 0px 0px rgba(255,255,255,0.31) !important;
-	box-shadow: 5px 5px 0px 0px rgba(255,255,255,0.31) !important;
+	-webkit-box-shadow: 5px 5px 0px 0px rgba(255, 255, 255, 0.31) !important;
+	-moz-box-shadow: 5px 5px 0px 0px rgba(255, 255, 255, 0.31) !important;
+	box-shadow: 5px 5px 0px 0px rgba(255, 255, 255, 0.31) !important;
 }
 
 .purple:hover {
 	background-position: right center;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
 	font-family: 'Abel', sans-serif !important;
 }

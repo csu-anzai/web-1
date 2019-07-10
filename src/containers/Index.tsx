@@ -6,7 +6,7 @@ import { Grid, Button, Container } from 'semantic-ui-react';
 
 import Value from '../components/Value';
 
-import * as bg from '../assets/cubes.png';
+import * as bg from '../assets/bg1.jpeg';
 
 const Jumbotron = styled.div`
 	margin-top: -80px;
@@ -15,7 +15,7 @@ const Jumbotron = styled.div`
 	padding-bottom: 15% !important;
 
 	background: #aa251c url(${bg}) !important;
-	/* background-size: 100% !important; */
+	background-size: 100% !important;
 	box-shadow: 0px 100px 100px -90px #000 inset;
 
 	color: #eee !important;
@@ -96,16 +96,15 @@ class Index extends React.Component<any, any> {
 	public render() {
 		const values: IValue[] = [
 			{
-				icon: 'pen square',
-				heading: 'Beautiful',
+				icon: 'th',
+				heading: 'Simplicity',
 				content: `Lorem ipsum dolor sit amet, consectetur
 				adipiscing elit. Etiam non dolor eros. Praesent
 				ut tempor elit. Suspendisse convallis mauris
 				sapien, nec consequat arcu bibendum sed. Nec
 				consequat arcu bibendum sed. Lorem ipsum dolor
 				sit amet, consectetur adipiscing elit.
-				<br />
-				<br />
+				
 				Etiam non dolor eros. Praesent ut tempor elit.
 				Suspendisse convallis mauris sapien, nec
 				consequat arcu bibendum sed. Nec consequat arcu
@@ -113,8 +112,8 @@ class Index extends React.Component<any, any> {
 				iconPosition: 'left'
 			},
 			{
-				icon: 'bitcoin',
-				heading: 'Competetive Pricing',
+				icon: 'microchip',
+				heading: 'Innovation',
 				content: `Lorem ipsum dolor sit amet, consectetur
 				adipiscing elit. Etiam non dolor eros. Praesent
 				ut tempor elit. Suspendisse convallis mauris
@@ -130,8 +129,8 @@ class Index extends React.Component<any, any> {
 				iconPosition: 'right'
 			},
 			{
-				icon: 'circle',
-				heading: 'Elegant',
+				icon: 'js',
+				heading: 'Elegance',
 				content: `Lorem ipsum dolor sit amet, consectetur
 				adipiscing elit. Etiam non dolor eros. Praesent
 				ut tempor elit. Suspendisse convallis mauris
