@@ -11,8 +11,8 @@ import * as bg from '../assets/cubes.png';
 const Jumbotron = styled.div`
 	margin-top: -80px;
 	text-align: center !important;
-	padding-top: 16% !important;
-	padding-bottom: 16% !important;
+	padding-top: 15% !important;
+	padding-bottom: 15% !important;
 
 	background: #aa251c url(${bg}) !important;
 	/* background-size: 100% !important; */
@@ -20,16 +20,18 @@ const Jumbotron = styled.div`
 
 	color: #eee !important;
 	z-index: 10000;
+
+	line-height: 1 !important;
 `;
 
 const Slogan = styled.div`
 	width: 70% !important;
 	margin: auto;
 	text-shadow: 1px 1px #444 !important;
-	font-size: 45px;
+	font-size: 40px;
 	font-family: 'Abel', sans-serif;
 	display: block;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	font-weight: bold;
 `;
 

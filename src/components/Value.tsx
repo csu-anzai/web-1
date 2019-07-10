@@ -5,7 +5,7 @@ import { Spring, config } from 'react-spring/renderprops';
 import { Grid, Container, Icon } from 'semantic-ui-react';
 
 const ValueContainer = styled(Container)`
-	padding: 100px;
+	padding: 100px 50px;
 `;
 
 const ColouredIcon = styled(Icon)`
