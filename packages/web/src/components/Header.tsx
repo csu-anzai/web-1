@@ -7,8 +7,6 @@ import { Container, Icon, Image } from 'semantic-ui-react';
 import * as logo from '../assets/brand2/logo_transparent.png';
 
 const HeaderWrapper = styled.div`
-	position: fixed;
-	background: #aa251c;
 	line-height: 120px;
 	height: 120px;
 	width: 100%;
@@ -44,7 +42,7 @@ class Header extends React.Component<{}, {}> {
 		return (
 			<HeaderWrapper>
 				<Container fluid={false}>
-					<Logo src={logo} width={120} />
+					<Logo src={logo} width={140} />
 					<Socials>
 						<a href="/">
 							<Icon name="instagram" size="big" />

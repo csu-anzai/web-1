@@ -24,10 +24,7 @@ class Header extends React.Component<{}, {}> {
 			<React.Fragment>
 				<FooterWrapper>
 					<Container>
-						<Copyright>
-							App Maven <Icon name="copyright outline" /> All
-							Rights Reserved
-						</Copyright>
+						<Copyright></Copyright>
 					</Container>
 				</FooterWrapper>
 			</React.Fragment>

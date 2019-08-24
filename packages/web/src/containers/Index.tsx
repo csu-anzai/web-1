@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { config, Spring } from 'react-spring/renderprops';
 import { Button, Container, Grid } from 'semantic-ui-react';
 
 import Value from '../components/Value';
 
-import * as bg from '../assets/bg1.jpeg';
+import * as bg from '../assets/cubes.png';
 
 const Jumbotron = styled.div`
 	text-align: center !important;
@@ -14,13 +13,15 @@ const Jumbotron = styled.div`
 	padding-bottom: 15% !important;
 
 	background: #aa251c url(${bg}) !important;
-	background-size: 100% !important;
+	/* background-size: 100% !important; */
 	box-shadow: 0px 100px 100px -90px #000 inset;
 
 	color: #eee !important;
 	z-index: 10000;
 
 	line-height: 1 !important;
+
+	margin-top: -120px;
 `;
 
 const Slogan = styled.div`
@@ -43,7 +44,9 @@ const SecondarySlogan = styled.div`
 `;
 
 const Portfolio = styled.div`
-	margin-top: 50px !important;
+	background: #f4f5f7 !important;
+	padding-top: 50px;
+	padding-bottom: 100px;
 `;
 
 const PortfolioItem = styled.div`
@@ -55,14 +58,14 @@ const PortfolioItem = styled.div`
 
 const Contact = styled.div`
 	box-shadow: 0 4px 10px -6px #eee !important;
-	margin-top: 100px;
-	height: 300px;
+	height: 700px;
 	background: #fff;
 	padding-top: 50px;
 `;
 
 const Values = styled.div`
 	padding: 50px 0;
+	padding-bottom: 0px !important;
 	background: #fff !important;
 	box-shadow: 0 4px 10px -6px #eee !important;
 
@@ -149,30 +152,11 @@ class Index extends React.Component<any, any> {
 		return (
 			<React.Fragment>
 				<Jumbotron>
-					<Spring
-						from={{ opacity: 0, marginTop: 100 }}
-						to={{ opacity: 1, marginTop: 0 }}
-						config={config.molasses}
-					>
-						{props => (
-							<Slogan style={props}>
-								Beautiful & Elegant Consulting Solutions
-							</Slogan>
-						)}
-					</Spring>
-					<Spring
-						from={{ opacity: 0, marginTop: 100 }}
-						to={{ opacity: 1, marginTop: 0 }}
-						config={config.molasses}
-					>
-						{props => (
-							<SecondarySlogan style={props}>
-								Lorem Ipsum is simply dummy text of the printing
-								and typesetting industry
-							</SecondarySlogan>
-						)}
-					</Spring>
-					<Button content="Get A Quote" />
+					<Slogan>Beautiful. Elegant. Innovative.</Slogan>
+					<SecondarySlogan>
+						Lorem Ipsum is simply dummy text of the printing and
+						typesetting industry
+					</SecondarySlogan>
 				</Jumbotron>
 				<Values>
 					{values.map(value => (
