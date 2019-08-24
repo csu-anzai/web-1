@@ -1,56 +1,43 @@
 {
-	"name": "appmaven.io",
-	"version": "0.1.0",
+	"name": "appmaven",
 	"private": true,
-	"dependencies": {
-		"react": "^16.9.0",
-		"react-dom": "^16.9.0",
-		"react-redux": "^7.1.0",
-		"react-router-dom": "^5.0.1",
-		"react-scripts": "3.1.1",
-		"react-spring": "^8.0.27",
-		"redux-logger": "^3.0.6",
-		"redux-persist": "^5.10.0",
-		"redux-thunk": "^2.3.0",
-		"semantic-ui-css": "^2.4.1",
-		"semantic-ui-react": "^0.88.0",
-		"styled-components": "^4.3.2"
-	},
+	"author": "App Maven",
+	"workspaces": [
+		"packages/*"
+	],
+	"authors": [
+		{
+			"name": "Danu Kumanan",
+			"email": "danu@appmaven.io",
+			"homepage": "https://github.com/danu3006"
+		},
+		{
+			"name": "Nami Shah",
+			"email": "nami@appmaven.io",
+			"homepage": "https://github.com/shahnami"
+		}
+	],
 	"scripts": {
-		"dev": "react-scripts start",
-		"clean": "rm -rf ./node_modules",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
-	},
-	"eslintConfig": {
-		"extends": "react-app"
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
+		"run:react": "lerna run dev",
+		"postinstall": "yarn lint && yarn run build && lerna link",
+		"dev": "yarn run:react",
+		"lint": "lerna run lint",
+		"clean": "lerna run clean && rm -rf node_modules",
+		"build": "lerna run build"
 	},
 	"devDependencies": {
-		"@types/jest": "24.0.18",
 		"@types/node": "12.7.2",
+		"concurrently": "^4.1.2",
+		"ts-node": "^8.3.0",
+		"tslint": "^5.19.0",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "^3.5.3",
+		"lerna": "^3.16.4",
+		"@types/jest": "24.0.18",
 		"@types/react": "16.9.2",
 		"@types/react-dom": "16.9.0",
 		"@types/react-redux": "^7.1.2",
 		"@types/react-router-dom": "^4.3.5",
-		"@types/redux-logger": "^3.0.7",
-		"@types/redux-persist": "^4.3.1",
-		"@types/redux-thunk": "^2.1.0",
-		"@types/styled-components": "^4.1.18",
-		"tslint": "^5.19.0",
-		"tslint-config-prettier": "^1.18.0",
-		"typescript": "3.5.3"
+		"@types/styled-components": "^4.1.18"
 	}
 }

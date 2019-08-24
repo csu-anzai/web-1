@@ -7,7 +7,9 @@ import { PersistConfig, persistReducer, persistStore } from 'redux-persist';
 
 import rootReducer from './modules';
 
-export interface Store {}
+export interface Store {
+	empty?: null;
+}
 
 const persistConfig: PersistConfig = {
 	key: 'root',
