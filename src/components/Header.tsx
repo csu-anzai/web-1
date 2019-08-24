@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import { Container, Image, Icon } from 'semantic-ui-react';
+import { Container, Icon, Image } from 'semantic-ui-react';
 
 import * as logo from '../assets/brand2/logo_transparent.png';
 

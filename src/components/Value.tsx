@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Spring, config } from 'react-spring/renderprops';
-import { Grid, Container, Icon } from 'semantic-ui-react';
+import { config, Spring } from 'react-spring/renderprops';
+import { Container, Grid, Icon } from 'semantic-ui-react';
 
 const ValueContainer = styled(Container)`
 	padding: 100px 50px;
