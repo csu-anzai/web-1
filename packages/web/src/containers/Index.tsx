@@ -5,13 +5,15 @@ import { Button, Container, Grid } from 'semantic-ui-react';
 
 import Value from '../components/Value';
 
+import * as bg from '../assets/cubes.png';
+
 const Jumbotron = styled.div`
 	text-align: center !important;
-	padding-top: 17% !important;
-	padding-bottom: 17% !important;
+	padding-top: 15% !important;
+	padding-bottom: 15% !important;
 
-	background: #aa251c !important;
-	background-size: 100% !important;
+	background: #aa251c url(${bg}) !important;
+	/* background-size: 100% !important; */
 	box-shadow: 0px 100px 100px -90px #000 inset;
 
 	color: #eee !important;
@@ -42,7 +44,9 @@ const SecondarySlogan = styled.div`
 `;
 
 const Portfolio = styled.div`
-	margin-top: 50px !important;
+	background: #f4f5f7 !important;
+	padding-top: 50px;
+	padding-bottom: 100px;
 `;
 
 const PortfolioItem = styled.div`
@@ -54,7 +58,6 @@ const PortfolioItem = styled.div`
 
 const Contact = styled.div`
 	box-shadow: 0 4px 10px -6px #eee !important;
-	margin-top: 100px;
 	height: 700px;
 	background: #fff;
 	padding-top: 50px;
@@ -149,12 +152,11 @@ class Index extends React.Component<any, any> {
 		return (
 			<React.Fragment>
 				<Jumbotron>
-					<Slogan>Beautiful & Elegant Consulting Solutions</Slogan>
+					<Slogan>Beautiful. Elegant. Innovative.</Slogan>
 					<SecondarySlogan>
 						Lorem Ipsum is simply dummy text of the printing and
 						typesetting industry
 					</SecondarySlogan>
-					<Button content="Get A Quote" />
 				</Jumbotron>
 				<Values>
 					{values.map(value => (
