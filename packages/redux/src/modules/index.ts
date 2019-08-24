@@ -2,17 +2,21 @@ import { ThunkAction } from 'redux-thunk';
 
 import { combineReducers } from 'redux';
 
-import { Store } from '../store';
+import { IStore } from '../store';
 
-export type ThunkResult<R> = ThunkAction<R, Store, undefined, BaseAction<any>>;
-export interface BaseAction<Payload> {
-	type: string;
-	payload?: Payload;
-}
+import quote from './quote';
 
+export type ThunkResult<R> = ThunkAction<
+	R,
+	IStore,
+	undefined,
+	IBaseAction<any>
+>;
 export interface IBaseAction<Payload> {
 	type: string;
 	payload?: Payload;
 }
 
-export default combineReducers({});
+export default combineReducers({
+	quote
+});

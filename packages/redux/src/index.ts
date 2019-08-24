@@ -1,8 +1,40 @@
-export { default as getStores } from './store';
+import {
+	fetchBranding,
+	fetchDone,
+	fetchIntegration,
+	fetchLogin,
+	fetchPayments,
+	fetchProfiles,
+	fetchRatings,
+	fetchType,
+	fetchUX
+} from './modules/quote';
 
-// Auth
-// export { IAuthState } from './modules/quote';
+export { default as getStores, IStore } from './store';
 
-// export const event = {
-//     create: createEvent
-// };
+// Quote
+export {
+	IQuoteState,
+	IOption,
+	fetchBranding,
+	fetchType,
+	fetchProfiles,
+	fetchUX,
+	fetchLogin,
+	fetchPayments,
+	fetchRatings,
+	fetchIntegration,
+	fetchDone
+} from './modules/quote';
+
+export const quote = {
+	type: fetchType,
+	profiles: fetchProfiles,
+	ux: fetchUX,
+	login: fetchLogin,
+	payments: fetchPayments,
+	branding: fetchBranding,
+	ratings: fetchRatings,
+	integration: fetchIntegration,
+	done: fetchDone
+};

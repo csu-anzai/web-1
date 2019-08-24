@@ -7,7 +7,11 @@ import { PersistConfig, persistReducer, persistStore } from 'redux-persist';
 
 import rootReducer from './modules';
 
-export interface Store {}
+import { IQuoteState } from './modules/quote';
+
+export interface IStore {
+	quote: IQuoteState;
+}
 
 const persistConfig: PersistConfig = {
 	key: 'root',
