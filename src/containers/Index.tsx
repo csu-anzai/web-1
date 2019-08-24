@@ -9,7 +9,6 @@ import Value from '../components/Value';
 import * as bg from '../assets/bg1.jpeg';
 
 const Jumbotron = styled.div`
-	margin-top: -80px;
 	text-align: center !important;
 	padding-top: 15% !important;
 	padding-bottom: 15% !important;

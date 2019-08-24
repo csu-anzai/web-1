@@ -7,11 +7,12 @@ import { Container, Image, Icon } from 'semantic-ui-react';
 import * as logo from '../assets/brand2/logo_transparent.png';
 
 const HeaderWrapper = styled.div`
-	background: rgba(255, 255, 255, 0.9);
-	box-shadow: 0 4px 20px -6px #f1f1f1 !important;
-	line-height: 80px;
-	height: 80px;
+	position: fixed;
+	background: #aa251c;
+	line-height: 120px;
+	height: 120px;
 	width: 100%;
+	z-index: 1000000;
 `;
 
 const Logo = styled(Image)`
@@ -21,7 +22,6 @@ const Logo = styled(Image)`
 
 const Socials = styled.div`
 	float: right;
-	padding-top: 20px;
 	& a {
 		color: #eee !important;
 		padding: 0 7px;
@@ -44,7 +44,7 @@ class Header extends React.Component<{}, {}> {
 		return (
 			<HeaderWrapper>
 				<Container fluid={false}>
-					<Logo src={logo} width={150} />
+					<Logo src={logo} width={120} />
 					<Socials>
 						<a href="/">
 							<Icon name="instagram" size="big" />
