@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Spring, config } from 'react-spring/renderprops';
-import { Grid, Button, Container } from 'semantic-ui-react';
+import { config, Spring } from 'react-spring/renderprops';
+import { Button, Container, Grid } from 'semantic-ui-react';
 
 import Value from '../components/Value';
 
