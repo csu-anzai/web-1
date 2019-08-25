@@ -26,8 +26,8 @@ button {
 
 .red {
 	background: #a72608 !important;
-	/* background: -webkit-linear-gradient(to left, #a72608, #d31027) !important; */
-	/* background: linear-gradient(to left, #a72608, #d31027) !important; */
+	background: -webkit-linear-gradient(to left, #a72608, #d31027) !important;
+	background: linear-gradient(to left, #a72608, #d31027) !important;
 }
 
 .blue p {

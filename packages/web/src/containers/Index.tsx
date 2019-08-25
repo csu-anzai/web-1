@@ -8,14 +8,14 @@ import Value from '../components/Value';
 import * as bg from '../assets/cubes.png';
 
 // values
-import * as val1 from '../assets/value1.png';
-import * as val2 from '../assets/value2.png';
-import * as val3 from '../assets/value3.png';
+import * as val1 from '../assets/redval1.png';
+import * as val2 from '../assets/redval2.png';
+import * as val3 from '../assets/redval3.png';
 
 const Jumbotron = styled.div`
 	text-align: center !important;
-	padding-top: 18% !important;
-	padding-bottom: 18% !important;
+	padding-top: 17% !important;
+	padding-bottom: 17% !important;
 
 	background: #090c02 url(${val3}) no-repeat center !important;
 	background-size: 80% !important;
@@ -33,7 +33,7 @@ const Slogan = styled.div`
 	width: 70% !important;
 	margin: auto;
 	text-shadow: 1px 1px #111 !important;
-	font-size: 40px;
+	font-size: 35px;
 	font-family: 'Abel', sans-serif;
 	display: block;
 	margin-bottom: 20px;
@@ -41,8 +41,8 @@ const Slogan = styled.div`
 `;
 
 const SecondarySlogan = styled.div`
-	font-size: 20px;
-	width: 60%;
+	font-size: 18px;
+	width: 50%;
 	margin: auto;
 	font-family: 'Abel', sans-serif;
 	text-shadow: 1px 1px #111 !important;
