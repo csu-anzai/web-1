@@ -1,13 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import styled from 'styled-components';
 
 import { Button, Container, Grid } from 'semantic-ui-react';
 
 import Value from '../components/Value';
 
-import * as bg from '../assets/cubes.png';
-
-// values
 import * as val1 from '../assets/redval1.png';
 import * as val2 from '../assets/redval2.png';
 import * as val3 from '../assets/redval3.png';
@@ -101,121 +99,119 @@ interface IValue {
 	iconPosition: 'left' | 'right';
 }
 
-class Index extends React.Component<any, any> {
-	public render() {
-		const values: IValue[] = [
-			{
-				image: val1,
-				heading: 'Simplicity',
-				content: `Lorem ipsum dolor sit amet, consectetur
-				adipiscing elit. Etiam non dolor eros. Praesent
-				ut tempor elit. Suspendisse convallis mauris
-				sapien, nec consequat arcu bibendum sed. Nec
-				consequat arcu bibendum sed. Lorem ipsum dolor
-				sit amet, consectetur adipiscing elit.
-				
-				Etiam non dolor eros. Praesent ut tempor elit.
-				Suspendisse convallis mauris sapien, nec
-				consequat arcu bibendum sed. Nec consequat arcu
-				bibendum sed.`,
-				iconPosition: 'left'
-			},
-			{
-				image: val2,
-				heading: 'Innovation',
-				content: `Lorem ipsum dolor sit amet, consectetur
-				adipiscing elit. Etiam non dolor eros. Praesent
-				ut tempor elit. Suspendisse convallis mauris
-				sapien, nec consequat arcu bibendum sed. Nec
-				consequat arcu bibendum sed. Lorem ipsum dolor
-				sit amet, consectetur adipiscing elit.
-				<br />
-				<br />
-				Etiam non dolor eros. Praesent ut tempor elit.
-				Suspendisse convallis mauris sapien, nec
-				consequat arcu bibendum sed. Nec consequat arcu
-				bibendum sed.`,
-				iconPosition: 'right'
-			},
-			{
-				image: val3,
-				heading: 'Elegance',
-				content: `Lorem ipsum dolor sit amet, consectetur
-				adipiscing elit. Etiam non dolor eros. Praesent
-				ut tempor elit. Suspendisse convallis mauris
-				sapien, nec consequat arcu bibendum sed. Nec
-				consequat arcu bibendum sed. Lorem ipsum dolor
-				sit amet, consectetur adipiscing elit.
-				<br />
-				<br />
-				Etiam non dolor eros. Praesent ut tempor elit.
-				Suspendisse convallis mauris sapien, nec
-				consequat arcu bibendum sed. Nec consequat arcu
-				bibendum sed.`,
-				iconPosition: 'left'
-			}
-		];
+const Index: React.FC<{}> = () => {
+	const [values, _] = useState<IValue[]>([
+		{
+			image: val1,
+			heading: 'Simplicity',
+			content: `Lorem ipsum dolor sit amet, consectetur
+			adipiscing elit. Etiam non dolor eros. Praesent
+			ut tempor elit. Suspendisse convallis mauris
+			sapien, nec consequat arcu bibendum sed. Nec
+			consequat arcu bibendum sed. Lorem ipsum dolor
+			sit amet, consectetur adipiscing elit.
+			
+			Etiam non dolor eros. Praesent ut tempor elit.
+			Suspendisse convallis mauris sapien, nec
+			consequat arcu bibendum sed. Nec consequat arcu
+			bibendum sed.`,
+			iconPosition: 'left'
+		},
+		{
+			image: val2,
+			heading: 'Innovation',
+			content: `Lorem ipsum dolor sit amet, consectetur
+			adipiscing elit. Etiam non dolor eros. Praesent
+			ut tempor elit. Suspendisse convallis mauris
+			sapien, nec consequat arcu bibendum sed. Nec
+			consequat arcu bibendum sed. Lorem ipsum dolor
+			sit amet, consectetur adipiscing elit.
+			<br />
+			<br />
+			Etiam non dolor eros. Praesent ut tempor elit.
+			Suspendisse convallis mauris sapien, nec
+			consequat arcu bibendum sed. Nec consequat arcu
+			bibendum sed.`,
+			iconPosition: 'right'
+		},
+		{
+			image: val3,
+			heading: 'Elegance',
+			content: `Lorem ipsum dolor sit amet, consectetur
+			adipiscing elit. Etiam non dolor eros. Praesent
+			ut tempor elit. Suspendisse convallis mauris
+			sapien, nec consequat arcu bibendum sed. Nec
+			consequat arcu bibendum sed. Lorem ipsum dolor
+			sit amet, consectetur adipiscing elit.
+			<br />
+			<br />
+			Etiam non dolor eros. Praesent ut tempor elit.
+			Suspendisse convallis mauris sapien, nec
+			consequat arcu bibendum sed. Nec consequat arcu
+			bibendum sed.`,
+			iconPosition: 'left'
+		}
+	]);
 
-		return (
-			<React.Fragment>
-				<Jumbotron>
-					<Slogan>
-						Beautiful<span>.</span> Elegant. Innovative.
-					</Slogan>
-					<SecondarySlogan>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Etiam non dolor eros. Praesent ut tempor elit.
-						Suspendisse convallis mauris sapien, nec consequat arcu
-						bibendum sedLorem ipsum dolor sit amet, consectetur
-						adipiscing elit. Etiam non dolor eros.
-					</SecondarySlogan>
-					<Button color={'red'} content="Request Quote" />
-				</Jumbotron>
-				<Values>
-					{values.map(value => (
-						<Value
-							image={value.image}
-							heading={value.heading}
-							content={value.content}
-							iconPosition={value.iconPosition}
-						/>
-					))}
-				</Values>
-				<Portfolio>
-					<Container>
-						<h1>Portfolio</h1>
-						<Grid columns="equal">
-							<Grid.Column>
-								<PortfolioItem />
-							</Grid.Column>
-							<Grid.Column>
-								<PortfolioItem />
-							</Grid.Column>
-							<Grid.Column>
-								<PortfolioItem />
-							</Grid.Column>
-						</Grid>
-						<Grid columns="equal">
-							<Grid.Column>
-								<PortfolioItem />
-							</Grid.Column>
-							<Grid.Column>
-								<PortfolioItem />
-							</Grid.Column>
-							<Grid.Column>
-								<PortfolioItem />
-							</Grid.Column>
-						</Grid>
-					</Container>
-				</Portfolio>
-				<Contact>
-					<Container>
-						<h1>Contact Us</h1>
-					</Container>
-				</Contact>
-			</React.Fragment>
-		);
-	}
-}
+	return (
+		<React.Fragment>
+			<Jumbotron>
+				<Slogan>
+					Beautiful<span>.</span> Elegant. Innovative.
+				</Slogan>
+				<SecondarySlogan>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Etiam non dolor eros. Praesent ut tempor elit. Suspendisse
+					convallis mauris sapien, nec consequat arcu bibendum
+					sedLorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Etiam non dolor eros.
+				</SecondarySlogan>
+				<Button color={'red'} content="Request Quote" />
+			</Jumbotron>
+			<Values>
+				{values.map(value => (
+					<Value
+						image={value.image}
+						heading={value.heading}
+						content={value.content}
+						iconPosition={value.iconPosition}
+					/>
+				))}
+			</Values>
+			<Portfolio>
+				<Container>
+					<h1>Portfolio</h1>
+					<Grid columns="equal">
+						<Grid.Column>
+							<PortfolioItem />
+						</Grid.Column>
+						<Grid.Column>
+							<PortfolioItem />
+						</Grid.Column>
+						<Grid.Column>
+							<PortfolioItem />
+						</Grid.Column>
+					</Grid>
+					<Grid columns="equal">
+						<Grid.Column>
+							<PortfolioItem />
+						</Grid.Column>
+						<Grid.Column>
+							<PortfolioItem />
+						</Grid.Column>
+						<Grid.Column>
+							<PortfolioItem />
+						</Grid.Column>
+					</Grid>
+				</Container>
+			</Portfolio>
+			<Contact>
+				<Container>
+					<h1>Contact Us</h1>
+				</Container>
+			</Contact>
+		</React.Fragment>
+	);
+};
 
 export default Index;

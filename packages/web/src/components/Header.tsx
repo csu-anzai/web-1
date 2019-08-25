@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import { Container, Icon, Image } from 'semantic-ui-react';
+import { Container, Image } from 'semantic-ui-react';
 
 import * as logo from '../assets/brand2/logo_transparent.png';
 
@@ -31,35 +31,25 @@ const Navigation = styled.div`
 	}
 
 	& a:hover {
-		/* color: #3a1c71 !important;
-		color: -webkit-linear-gradient(
-			to right,
-			#3a1c71,
-			#d76d77,
-			#ffaf7b
-		) !important;
-		color: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b) !important; */
 	}
 `;
 
-class Header extends React.Component<{}, {}> {
-	public render() {
-		return (
-			<HeaderWrapper>
-				<Container fluid={false}>
-					<Logo src={logo} width={140} />
-					<Navigation>
-						<a href="/">
-							<li>Porfolio</li>
-						</a>
-						<a href="/">
-							<li>Contact Us</li>
-						</a>
-					</Navigation>
-				</Container>
-			</HeaderWrapper>
-		);
-	}
-}
+const Header: React.FC = () => {
+	return (
+		<HeaderWrapper>
+			<Container fluid={false}>
+				<Logo src={logo} width={140} />
+				<Navigation>
+					<a href="/">
+						<li>Porfolio</li>
+					</a>
+					<a href="/">
+						<li>Contact Us</li>
+					</a>
+				</Navigation>
+			</Container>
+		</HeaderWrapper>
+	);
+};
 
 export default Header;
