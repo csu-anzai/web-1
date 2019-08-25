@@ -18,11 +18,16 @@ const Logo = styled(Image)`
 	padding-top: 35px !important;
 `;
 
-const Socials = styled.div`
+const Navigation = styled.div`
 	float: right;
 	& a {
 		color: #eee !important;
-		padding: 0 7px;
+		padding: 5px 20px;
+	}
+
+	& a li {
+		display: inline-block;
+		list-style: none;
 	}
 
 	& a:hover {
@@ -43,17 +48,14 @@ class Header extends React.Component<{}, {}> {
 			<HeaderWrapper>
 				<Container fluid={false}>
 					<Logo src={logo} width={140} />
-					<Socials>
+					<Navigation>
 						<a href="/">
-							<Icon name="instagram" size="big" />
+							<li>Porfolio</li>
 						</a>
 						<a href="/">
-							<Icon name="facebook" size="big" />
+							<li>Contact Us</li>
 						</a>
-						<a href="/">
-							<Icon name="twitter" size="big" />
-						</a>
-					</Socials>
+					</Navigation>
 				</Container>
 			</HeaderWrapper>
 		);

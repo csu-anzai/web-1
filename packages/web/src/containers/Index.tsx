@@ -7,12 +7,17 @@ import Value from '../components/Value';
 
 import * as bg from '../assets/cubes.png';
 
+// values
+import * as val1 from '../assets/value1.png';
+import * as val2 from '../assets/value2.png';
+import * as val3 from '../assets/value3.png';
+
 const Jumbotron = styled.div`
 	text-align: center !important;
-	padding-top: 15% !important;
-	padding-bottom: 15% !important;
+	padding-top: 18% !important;
+	padding-bottom: 18% !important;
 
-	background: #aa251c url(${bg}) !important;
+	background: #a72608 url(${val3}) !important;
 	/* background-size: 100% !important; */
 	box-shadow: 0px 100px 100px -90px #000 inset;
 
@@ -27,7 +32,7 @@ const Jumbotron = styled.div`
 const Slogan = styled.div`
 	width: 70% !important;
 	margin: auto;
-	text-shadow: 1px 1px #444 !important;
+	text-shadow: 1px 1px #111 !important;
 	font-size: 40px;
 	font-family: 'Abel', sans-serif;
 	display: block;
@@ -37,7 +42,10 @@ const Slogan = styled.div`
 
 const SecondarySlogan = styled.div`
 	font-size: 20px;
+	width: 60%;
+	margin: auto;
 	font-family: 'Abel', sans-serif;
+	text-shadow: 1px 1px #111 !important;
 	display: block;
 	margin-bottom: 40px;
 	font-weight: bold;
@@ -64,7 +72,7 @@ const Contact = styled.div`
 `;
 
 const Values = styled.div`
-	padding: 50px 0;
+	padding: 20px 0;
 	padding-bottom: 0px !important;
 	background: #fff !important;
 	box-shadow: 0 4px 10px -6px #eee !important;
@@ -88,7 +96,7 @@ const Values = styled.div`
 `;
 
 interface IValue {
-	icon: string;
+	image: any;
 	heading: string;
 	content: string;
 	iconPosition: 'left' | 'right';
@@ -98,7 +106,7 @@ class Index extends React.Component<any, any> {
 	public render() {
 		const values: IValue[] = [
 			{
-				icon: 'th',
+				image: val1,
 				heading: 'Simplicity',
 				content: `Lorem ipsum dolor sit amet, consectetur
 				adipiscing elit. Etiam non dolor eros. Praesent
@@ -114,7 +122,7 @@ class Index extends React.Component<any, any> {
 				iconPosition: 'left'
 			},
 			{
-				icon: 'microchip',
+				image: val2,
 				heading: 'Innovation',
 				content: `Lorem ipsum dolor sit amet, consectetur
 				adipiscing elit. Etiam non dolor eros. Praesent
@@ -131,7 +139,7 @@ class Index extends React.Component<any, any> {
 				iconPosition: 'right'
 			},
 			{
-				icon: 'js',
+				image: val3,
 				heading: 'Elegance',
 				content: `Lorem ipsum dolor sit amet, consectetur
 				adipiscing elit. Etiam non dolor eros. Praesent
@@ -154,14 +162,18 @@ class Index extends React.Component<any, any> {
 				<Jumbotron>
 					<Slogan>Beautiful. Elegant. Innovative.</Slogan>
 					<SecondarySlogan>
-						Lorem Ipsum is simply dummy text of the printing and
-						typesetting industry
+						The Factom® Protocol is a blockchain utilized by the U.S
+						Department of Homeland Security and the Bill and Melinda
+						Gates Foundation. The protocol provides easy integration
+						into legacy systems without the need to handle
+						cryptocurrency.
 					</SecondarySlogan>
+					<Button color={'blue'} content="Request Quote" />
 				</Jumbotron>
 				<Values>
 					{values.map(value => (
 						<Value
-							icon={value.icon}
+							image={value.image}
 							heading={value.heading}
 							content={value.content}
 							iconPosition={value.iconPosition}

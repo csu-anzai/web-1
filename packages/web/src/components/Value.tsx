@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Container, Grid, Icon } from 'semantic-ui-react';
+import { Container, Grid, Icon, Image, Button } from 'semantic-ui-react';
 
 const ValueContainer = styled(Container)`
 	padding: 100px 50px;
@@ -12,7 +12,7 @@ const ColouredIcon = styled(Icon)`
 `;
 
 interface Props {
-	icon: string;
+	image: any;
 	heading: string;
 	content: string;
 	iconPosition: 'left' | 'right';
@@ -20,14 +20,15 @@ interface Props {
 
 class Value extends React.Component<Props, {}> {
 	public render() {
-		const { icon, heading, content, iconPosition } = this.props;
+		const { image, heading, content, iconPosition } = this.props;
 
 		return (
 			<ValueContainer>
 				<Grid columns="equal">
 					{iconPosition === 'left' ? (
-						<Grid.Column width={3}>
-							<ColouredIcon name={icon} size="massive" />
+						<Grid.Column width={5}>
+							{/* <ColouredIcon name={icon} size="massive" /> */}
+							<Image src={this.props.image} />
 						</Grid.Column>
 					) : null}
 					<Grid.Column>
@@ -38,10 +39,14 @@ class Value extends React.Component<Props, {}> {
 						Etiam non dolor eros. Praesent ut tempor elit.
 						Suspendisse convallis mauris sapien, nec consequat arcu
 						bibendum sed. Nec consequat arcu bibendum sed.
+						<br />
+						<br />
+						<Button color="red" content={'Learn More'} />
 					</Grid.Column>
 					{iconPosition === 'right' ? (
-						<Grid.Column width={3}>
-							<ColouredIcon name={icon} size="massive" />
+						<Grid.Column width={5}>
+							{/* <ColouredIcon name={icon} size="massive" /> */}
+							<Image src={this.props.image} />
 						</Grid.Column>
 					) : null}
 				</Grid>
