@@ -158,12 +158,12 @@
         "signature": "9f1bffd2f3d87d48045f2d7ec9e02c0bad4dc867d2ee547fde82adc67b74ed82"
       },
       "/users/namishah/documents/appmaven/internal/appmaven.io/packages/redux/src/modules/quote.ts": {
-        "version": "c9c7a4df8aa5964b9db868ae80c35027dafcb6288f68cd06c5c2d1570a43b4fa",
-        "signature": "0c553a7c21dd1e697798a74458ac8a1a560af2a190af1d6dde20f9745870fb02"
+        "version": "6e247749f66356c851bb9d7e3abba46d5206165c8136fb29ba07fa53fbeb0489",
+        "signature": "dc8720869a49967b3a5306e08840c4c2e1f29c37ded7d8be77643f746086ac0c"
       },
       "/users/namishah/documents/appmaven/internal/appmaven.io/packages/redux/src/index.ts": {
-        "version": "4aac57c6a61c5df102280c3ae87ea0e2cc44865aa3f5d9ca3d8a8ced0814913a",
-        "signature": "6a599efe8f866869256fd4355c653c0b7315486885dd31a7f83b04e8f8ddf19d"
+        "version": "ce243c39f70cae82468c72df4811bf31ab4884b5ea3763f2bb2f7e56af137a3f",
+        "signature": "8a66aa227e5fe3220976cc553394782ea7862c6603c7457dcb02f2c102dc28e3"
       },
       "/users/namishah/documents/appmaven/internal/appmaven.io/node_modules/@babel/types/lib/index.d.ts": {
         "version": "bc12492fa90cd2ad3f73c10efa597503dbf59ebac0e3c9728cc10adaad6b0b87",
@@ -532,7 +532,8 @@
         "/Users/namishah/Documents/AppMaven/internal/appmaven.io/packages/redux/node_modules/@types",
         "/Users/namishah/Documents/AppMaven/internal/appmaven.io/node_modules/@types"
       ],
-      "project": "./tsconfig.json",
+      "project": "/Users/namishah/Documents/AppMaven/internal/appmaven.io/packages/redux/tsconfig.json",
+      "watch": true,
       "configFilePath": "/Users/namishah/Documents/AppMaven/internal/appmaven.io/packages/redux/tsconfig.json"
     },
     "referencedMap": {

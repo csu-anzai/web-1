@@ -1,13 +1,22 @@
 import {
-	fetchBranding,
+	fetchApp,
 	fetchDone,
-	fetchIntegration,
-	fetchLogin,
-	fetchPayments,
-	fetchProfiles,
-	fetchRatings,
-	fetchType,
-	fetchUX
+	fetchMobileBranding,
+	fetchMobileIntegration,
+	fetchMobileLogin,
+	fetchMobilePayments,
+	fetchMobileProfiles,
+	fetchMobileRatings,
+	fetchMobileType,
+	fetchMobileUX,
+	fetchWebCMS,
+	fetchWebIntegration,
+	fetchWebLogin,
+	fetchWebMarketing,
+	fetchWebPayments,
+	fetchWebProfiles,
+	fetchWebRatings,
+	fetchWebSearch
 } from './modules/quote';
 
 export { default as getStores, IStore } from './store';
@@ -16,25 +25,45 @@ export { default as getStores, IStore } from './store';
 export {
 	IQuoteState,
 	IOption,
-	fetchBranding,
-	fetchType,
-	fetchProfiles,
-	fetchUX,
-	fetchLogin,
-	fetchPayments,
-	fetchRatings,
-	fetchIntegration,
-	fetchDone
+	fetchMobileBranding,
+	fetchMobileType,
+	fetchMobileProfiles,
+	fetchMobileUX,
+	fetchMobileLogin,
+	fetchMobilePayments,
+	fetchMobileRatings,
+	fetchMobileIntegration,
+	fetchWebMarketing,
+	fetchWebProfiles,
+	fetchWebLogin,
+	fetchWebPayments,
+	fetchWebRatings,
+	fetchWebIntegration,
+	fetchWebSearch,
+	fetchWebCMS,
+	fetchDone,
+	fetchApp
 } from './modules/quote';
 
 export const quote = {
-	type: fetchType,
-	profiles: fetchProfiles,
-	ux: fetchUX,
-	login: fetchLogin,
-	payments: fetchPayments,
-	branding: fetchBranding,
-	ratings: fetchRatings,
-	integration: fetchIntegration,
-	done: fetchDone
+	mobileType: fetchMobileType,
+	mobileProfiles: fetchMobileProfiles,
+	mobileUX: fetchMobileUX,
+	mobileLogin: fetchMobileLogin,
+	mobilePayments: fetchMobilePayments,
+	mobileBranding: fetchMobileBranding,
+	mobileRatings: fetchMobileRatings,
+	mobileIntegration: fetchMobileIntegration,
+
+	webCMS: fetchWebCMS,
+	webSearch: fetchWebSearch,
+	webProfiles: fetchWebProfiles,
+	webMarketing: fetchWebMarketing,
+	webLogin: fetchWebLogin,
+	webPayments: fetchWebPayments,
+	webRatings: fetchWebRatings,
+	webIntegration: fetchWebIntegration,
+
+	done: fetchDone,
+	app: fetchApp
 };

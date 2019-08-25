@@ -1,40 +1,24 @@
 import { IBaseAction, ThunkResult } from './index';
 
-const FETCH_TYPE_INIT = '@appmaven/quote/FETCH/TYPE/INIT';
-const FETCH_TYPE_SUCCESS = '@beano/quote/FETCH/TYPE/SUCCESS';
-const FETCH_TYPE_ERROR = '@beano/quote/FETCH/TYPE/ERROR';
+// INIT
+const FETCH_APP_INIT = '@appmaven/quote/FETCH/APP/INIT';
+const FETCH_APP_SUCCESS = '@beano/quote/FETCH/APP/SUCCESS';
+const FETCH_APP_ERROR = '@beano/quote/FETCH/APP/ERROR';
 
-const FETCH_LOGIN_INIT = '@appmaven/quote/FETCH/LOGIN/INIT';
-const FETCH_LOGIN_SUCCESS = '@beano/quote/FETCH/LOGIN/SUCCESS';
-const FETCH_LOGIN_ERROR = '@beano/quote/FETCH/LOGIN/ERROR';
+// WEB
+const FETCH_WEB_INIT = '@appmaven/quote/FETCH/WEB/INIT';
+const FETCH_WEB_SUCCESS = '@beano/quote/FETCH/WEB/SUCCESS';
+const FETCH_WEB_ERROR = '@beano/quote/FETCH/WEB/ERROR';
 
-const FETCH_BRANDING_INIT = '@appmaven/quote/FETCH/BRANDING/INIT';
-const FETCH_BRANDING_SUCCESS = '@beano/quote/FETCH/BRANDING/SUCCESS';
-const FETCH_BRANDING_ERROR = '@beano/quote/FETCH/BRANDING/ERROR';
+// MOBILE
+const FETCH_MOBILE_INIT = '@appmaven/quote/FETCH/MOBILE/INIT';
+const FETCH_MOBILE_SUCCESS = '@beano/quote/FETCH/MOBILE/SUCCESS';
+const FETCH_MOBILE_ERROR = '@beano/quote/FETCH/MOBILE/ERROR';
 
-const FETCH_PROFILES_INIT = '@appmaven/quote/FETCH/PROFILES/INIT';
-const FETCH_PROFILES_SUCCESS = '@beano/quote/FETCH/PROFILES/SUCCESS';
-const FETCH_PROFILES_ERROR = '@beano/quote/FETCH/PROFILES/ERROR';
-
-const FETCH_UX_INIT = '@appmaven/quote/FETCH/UX/INIT';
-const FETCH_UX_SUCCESS = '@beano/quote/FETCH/UX/SUCCESS';
-const FETCH_UX_ERROR = '@beano/quote/FETCH/UX/ERROR';
-
-const FETCH_INTEGRATION_INIT = '@appmaven/quote/FETCH/INTEGRATION/INIT';
-const FETCH_INTEGRATION_SUCCESS = '@beano/quote/FETCH/INTEGRATION/SUCCESS';
-const FETCH_INTEGRATION_ERROR = '@beano/quote/FETCH/INTEGRATION/ERROR';
-
-const FETCH_RATINGS_INIT = '@appmaven/quote/FETCH/RATINGS/INIT';
-const FETCH_RATINGS_SUCCESS = '@beano/quote/FETCH/RATINGS/SUCCESS';
-const FETCH_RATINGS_ERROR = '@beano/quote/FETCH/RATINGS/ERROR';
-
-const FETCH_PAYMENTS_INIT = '@appmaven/quote/FETCH/PAYMENTS/INIT';
-const FETCH_PAYMENTS_SUCCESS = '@beano/quote/FETCH/PAYMENTS/SUCCESS';
-const FETCH_PAYMENTS_ERROR = '@beano/quote/FETCH/PAYMENTS/ERROR';
-
-const FETCH_DONE_INIT = '@appmaven/quote/FETCH/DONE/INIT';
-const FETCH_DONE_SUCCESS = '@beano/quote/FETCH/DONE/SUCCESS';
-const FETCH_DONE_ERROR = '@beano/quote/FETCH/DONE/ERROR';
+// DESKTOP
+const FETCH_DESKTOP_INIT = '@appmaven/quote/FETCH/DESKTOP/INIT';
+const FETCH_DESKTOP_SUCCESS = '@beano/quote/FETCH/DESKTOP/SUCCESS';
+const FETCH_DESKTOP_ERROR = '@beano/quote/FETCH/DESKTOP/ERROR';
 
 export interface IQuote {
 	title: string;
@@ -61,8 +45,8 @@ export interface IQuoteState {
 }
 
 const initial: IQuoteState = {
-	title: 'Test',
-	subtitle: 'Subtitle',
+	title: '',
+	subtitle: '',
 	options: [],
 	loading: false
 };
@@ -72,13 +56,13 @@ export default (
 	action: IBaseAction<any>
 ): IQuoteState => {
 	switch (action.type) {
-		case FETCH_TYPE_INIT:
+		case FETCH_APP_INIT:
 			return {
 				...state,
 				error: undefined,
 				loading: true
 			};
-		case FETCH_TYPE_SUCCESS:
+		case FETCH_APP_SUCCESS:
 			return {
 				...state,
 				title: action.payload.title,
@@ -87,20 +71,20 @@ export default (
 				error: undefined,
 				loading: false
 			};
-		case FETCH_TYPE_ERROR:
+		case FETCH_APP_ERROR:
 			return {
 				...state,
 				error: action.payload,
 				loading: false
 			};
 
-		case FETCH_LOGIN_INIT:
+		case FETCH_MOBILE_INIT:
 			return {
 				...state,
 				error: undefined,
 				loading: true
 			};
-		case FETCH_LOGIN_SUCCESS:
+		case FETCH_MOBILE_SUCCESS:
 			return {
 				...state,
 				title: action.payload.title,
@@ -109,20 +93,20 @@ export default (
 				error: undefined,
 				loading: false
 			};
-		case FETCH_LOGIN_ERROR:
+		case FETCH_MOBILE_ERROR:
 			return {
 				...state,
 				error: action.payload,
 				loading: false
 			};
 
-		case FETCH_PROFILES_INIT:
+		case FETCH_WEB_INIT:
 			return {
 				...state,
 				error: undefined,
 				loading: true
 			};
-		case FETCH_PROFILES_SUCCESS:
+		case FETCH_WEB_SUCCESS:
 			return {
 				...state,
 				title: action.payload.title,
@@ -131,20 +115,20 @@ export default (
 				error: undefined,
 				loading: false
 			};
-		case FETCH_PROFILES_ERROR:
+		case FETCH_WEB_ERROR:
 			return {
 				...state,
 				error: action.payload,
 				loading: false
 			};
 
-		case FETCH_PAYMENTS_INIT:
+		case FETCH_DESKTOP_INIT:
 			return {
 				...state,
 				error: undefined,
 				loading: true
 			};
-		case FETCH_PAYMENTS_SUCCESS:
+		case FETCH_DESKTOP_SUCCESS:
 			return {
 				...state,
 				title: action.payload.title,
@@ -153,117 +137,7 @@ export default (
 				error: undefined,
 				loading: false
 			};
-		case FETCH_PAYMENTS_ERROR:
-			return {
-				...state,
-				error: action.payload,
-				loading: false
-			};
-
-		case FETCH_RATINGS_INIT:
-			return {
-				...state,
-				error: undefined,
-				loading: true
-			};
-		case FETCH_RATINGS_SUCCESS:
-			return {
-				...state,
-				title: action.payload.title,
-				subtitle: action.payload.subtitle,
-				options: action.payload.options,
-				error: undefined,
-				loading: false
-			};
-		case FETCH_RATINGS_ERROR:
-			return {
-				...state,
-				error: action.payload,
-				loading: false
-			};
-
-		case FETCH_UX_INIT:
-			return {
-				...state,
-				error: undefined,
-				loading: true
-			};
-		case FETCH_UX_SUCCESS:
-			return {
-				...state,
-				title: action.payload.title,
-				subtitle: action.payload.subtitle,
-				options: action.payload.options,
-				error: undefined,
-				loading: false
-			};
-		case FETCH_UX_ERROR:
-			return {
-				...state,
-				error: action.payload,
-				loading: false
-			};
-
-		case FETCH_INTEGRATION_INIT:
-			return {
-				...state,
-				error: undefined,
-				loading: true
-			};
-		case FETCH_INTEGRATION_SUCCESS:
-			return {
-				...state,
-				title: action.payload.title,
-				subtitle: action.payload.subtitle,
-				options: action.payload.options,
-				error: undefined,
-				loading: false
-			};
-		case FETCH_INTEGRATION_ERROR:
-			return {
-				...state,
-				error: action.payload,
-				loading: false
-			};
-
-		case FETCH_BRANDING_INIT:
-			return {
-				...state,
-				error: undefined,
-				loading: true
-			};
-		case FETCH_BRANDING_SUCCESS:
-			return {
-				...state,
-				title: action.payload.title,
-				subtitle: action.payload.subtitle,
-				options: action.payload.options,
-				error: undefined,
-				loading: false
-			};
-		case FETCH_BRANDING_ERROR:
-			return {
-				...state,
-				error: action.payload,
-				loading: false
-			};
-
-		case FETCH_DONE_INIT:
-			return {
-				...state,
-				error: undefined,
-				loading: true
-			};
-		case FETCH_DONE_SUCCESS:
-			return {
-				...state,
-				title: action.payload.title,
-				subtitle: action.payload.subtitle,
-				options: action.payload.options,
-				error: undefined,
-				loading: false
-			};
-		case FETCH_DONE_ERROR:
+		case FETCH_DESKTOP_ERROR:
 			return {
 				...state,
 				error: action.payload,
@@ -275,53 +149,103 @@ export default (
 	}
 };
 
-export function fetchType(): ThunkResult<Promise<IQuote>> {
+export function fetchApp(): ThunkResult<Promise<IQuote>> {
 	return async dispatch => {
 		// initiate request
 		dispatch({
-			type: FETCH_TYPE_INIT
+			type: FETCH_APP_INIT
 		});
 
 		const response: IQuote = {
-			title: 'What type of app are you building?',
+			title: 'What type of platform are you building for?',
 			subtitle:
-				'Apple iOS is a better choice to reach a more engaged user base. Android has a broader reach, however, particularly in emerging markets, like Asia and Africa.',
+				'Have you ever wondered how much it would cost to make a website, mobile or desktop application? This handy app cost calculator will help you.',
 			options: [
 				{
-					title: 'Android',
+					title: 'Web',
 					image:
 						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/android-device-icon.png',
-					price: 5000
+					price: 1000
 				},
 				{
-					title: 'Apple iOS',
+					title: 'Mobile',
 					image:
 						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/iphone-icon.png',
-					price: 5000
+					price: 2000
 				},
 				{
-					title: 'Apple iOS and Android',
+					title: 'Desktop',
 					image:
 						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/ios-universal-icon.png',
-					price: 16000
+					price: 2500
 				}
 			]
 		};
 
 		dispatch({
 			payload: response,
-			type: FETCH_TYPE_SUCCESS
+			type: FETCH_APP_SUCCESS
 		});
 
 		return response;
 	};
 }
 
-export function fetchLogin(): ThunkResult<Promise<IQuote>> {
+// WEB
+
+export function fetchWebMarketing(): ThunkResult<Promise<IQuote>> {
 	return async dispatch => {
 		// initiate request
 		dispatch({
-			type: FETCH_LOGIN_INIT
+			type: FETCH_WEB_INIT
+		});
+
+		const response: IQuote = {
+			title: 'How many marketing pages will you need?',
+			subtitle:
+				'ie. how it works, contact us, team, about, press, terms, FAQ, hiring',
+			options: [
+				{
+					title: '1 to 3',
+					image:
+						'http://howmuchdoesawebsiteco.st/img/hmdawc/icons/pages-one-icon.png',
+					price: 1000
+				},
+				{
+					title: '4 to 9',
+					image:
+						'http://howmuchdoesawebsiteco.st/img/hmdawc/icons/pages-four-icon.png',
+					price: 2000
+				},
+				{
+					title: '10+',
+					image:
+						'http://howmuchdoesawebsiteco.st/img/hmdawc/icons/pages-ten-icon.png',
+					price: 3000
+				},
+				{
+					title: "None / I don't know",
+					image:
+						'http://howmuchdoesawebsiteco.st/img/hmdawc/icons/pages-idk-icon.png',
+					price: 0
+				}
+			]
+		};
+
+		dispatch({
+			payload: response,
+			type: FETCH_WEB_SUCCESS
+		});
+
+		return response;
+	};
+}
+
+export function fetchWebLogin(): ThunkResult<Promise<IQuote>> {
+	return async dispatch => {
+		// initiate request
+		dispatch({
+			type: FETCH_WEB_INIT
 		});
 
 		const response: IQuote = {
@@ -358,18 +282,18 @@ export function fetchLogin(): ThunkResult<Promise<IQuote>> {
 
 		dispatch({
 			payload: response,
-			type: FETCH_LOGIN_SUCCESS
+			type: FETCH_WEB_SUCCESS
 		});
 
 		return response;
 	};
 }
 
-export function fetchProfiles(): ThunkResult<Promise<IQuote>> {
+export function fetchWebProfiles(): ThunkResult<Promise<IQuote>> {
 	return async dispatch => {
 		// initiate request
 		dispatch({
-			type: FETCH_PROFILES_INIT
+			type: FETCH_WEB_INIT
 		});
 
 		const response: IQuote = {
@@ -400,18 +324,361 @@ export function fetchProfiles(): ThunkResult<Promise<IQuote>> {
 
 		dispatch({
 			payload: response,
-			type: FETCH_PROFILES_SUCCESS
+			type: FETCH_WEB_SUCCESS
 		});
 
 		return response;
 	};
 }
 
-export function fetchPayments(): ThunkResult<Promise<IQuote>> {
+export function fetchWebPayments(): ThunkResult<Promise<IQuote>> {
 	return async dispatch => {
 		// initiate request
 		dispatch({
-			type: FETCH_PAYMENTS_INIT
+			type: FETCH_WEB_INIT
+		});
+
+		const response: IQuote = {
+			title: 'Will you need to accept payments?',
+			subtitle: 'Accept credit cards, PayPal, Bitcoin.',
+			options: [
+				{
+					title: 'Yes',
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/payments-icon.png',
+					price: 5000
+				},
+				{
+					title: 'No',
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/no-payments-icon.png',
+					price: 0
+				},
+				{
+					title: "I don't know",
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/idk-payments-icon.png',
+					price: 0
+				}
+			]
+		};
+
+		dispatch({
+			payload: response,
+			type: FETCH_WEB_SUCCESS
+		});
+
+		return response;
+	};
+}
+
+export function fetchWebRatings(): ThunkResult<Promise<IQuote>> {
+	return async dispatch => {
+		// initiate request
+		dispatch({
+			type: FETCH_WEB_INIT
+		});
+
+		const response: IQuote = {
+			title: 'Do people rate or review things?',
+			subtitle:
+				'Keep in mind, ranking systems can vary in complexity and thus impact your budget.',
+			options: [
+				{
+					title: 'Yes',
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/ratings-icon.png',
+					price: 5000
+				},
+				{
+					title: 'No',
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/no-ratings-icon.png',
+					price: 0
+				},
+				{
+					title: "I don't know",
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/idk-ratings-icon.png',
+					price: 0
+				}
+			]
+		};
+
+		dispatch({
+			payload: response,
+			type: FETCH_WEB_SUCCESS
+		});
+
+		return response;
+	};
+}
+
+export function fetchWebIntegration(): ThunkResult<Promise<IQuote>> {
+	return async dispatch => {
+		// initiate request
+		dispatch({
+			type: FETCH_WEB_INIT
+		});
+
+		const response: IQuote = {
+			title: 'Does your app need to connect with your website?',
+			subtitle:
+				"This means you'll need to make an API(or Application Programming Interface.) It's how all your friendly apps talk to each other.",
+			options: [
+				{
+					title: 'Yes',
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/integrated-icon.png',
+					price: 10000
+				},
+				{
+					title: 'No',
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/no-integrated-icon.png',
+					price: 0
+				},
+				{
+					title: "I don't know",
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/idk-integrated-icon.png',
+					price: 0
+				}
+			]
+		};
+
+		dispatch({
+			payload: response,
+			type: FETCH_WEB_SUCCESS
+		});
+
+		return response;
+	};
+}
+
+export function fetchWebSearch(): ThunkResult<Promise<IQuote>> {
+	return async dispatch => {
+		// initiate request
+		dispatch({
+			type: FETCH_WEB_INIT
+		});
+
+		const response: IQuote = {
+			title: 'Does your website need search?',
+			subtitle:
+				'The cost to build a search function can vary greatly. The price given here is an average for search integration based on basic tagging. Not Google.',
+			options: [
+				{
+					title: 'Yes',
+					image:
+						'http://howmuchdoesawebsiteco.st/img/hmdawc/icons/search-icon.png',
+					price: 6000
+				},
+				{
+					title: 'No',
+					image:
+						'http://howmuchdoesawebsiteco.st/img/hmdawc/icons/search-no-icon.png',
+					price: 0
+				},
+				{
+					title: "I don't know",
+					image:
+						'http://howmuchdoesawebsiteco.st/img/hmdawc/icons/search-idk-icon.png',
+					price: 0
+				}
+			]
+		};
+
+		dispatch({
+			payload: response,
+			type: FETCH_WEB_SUCCESS
+		});
+
+		return response;
+	};
+}
+
+export function fetchWebCMS(): ThunkResult<Promise<IQuote>> {
+	return async dispatch => {
+		// initiate request
+		dispatch({
+			type: FETCH_WEB_INIT
+		});
+
+		const response: IQuote = {
+			title: 'Do you need a Content Management System (CMS)?',
+			subtitle:
+				'A CMS will let you update content on your site without writing code (i.e. a blog).',
+			options: [
+				{
+					title: 'Yes',
+					image:
+						'http://howmuchdoesawebsiteco.st/img/hmdawc/icons/cms-icon.png',
+					price: 4000
+				},
+				{
+					title: 'No',
+					image:
+						'http://howmuchdoesawebsiteco.st/img/hmdawc/icons/cms-no-icon.png',
+					price: 0
+				},
+				{
+					title: "I don't know",
+					image:
+						'http://howmuchdoesawebsiteco.st/img/hmdawc/icons/cms-idk-icon.png',
+					price: 0
+				}
+			]
+		};
+
+		dispatch({
+			payload: response,
+			type: FETCH_WEB_SUCCESS
+		});
+
+		return response;
+	};
+}
+
+// MOBILE
+
+export function fetchMobileType(): ThunkResult<Promise<IQuote>> {
+	return async dispatch => {
+		// initiate request
+		dispatch({
+			type: FETCH_MOBILE_INIT
+		});
+
+		const response: IQuote = {
+			title: 'What type of app are you building?',
+			subtitle:
+				'Apple iOS is a better choice to reach a more engaged user base. Android has a broader reach, however, particularly in emerging markets, like Asia and Africa.',
+			options: [
+				{
+					title: 'Android',
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/android-device-icon.png',
+					price: 5000
+				},
+				{
+					title: 'Apple iOS',
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/iphone-icon.png',
+					price: 5000
+				},
+				{
+					title: 'Apple iOS and Android',
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/ios-universal-icon.png',
+					price: 16000
+				}
+			]
+		};
+
+		dispatch({
+			payload: response,
+			type: FETCH_MOBILE_SUCCESS
+		});
+
+		return response;
+	};
+}
+
+export function fetchMobileLogin(): ThunkResult<Promise<IQuote>> {
+	return async dispatch => {
+		// initiate request
+		dispatch({
+			type: FETCH_MOBILE_INIT
+		});
+
+		const response: IQuote = {
+			title: 'Do people have to login?',
+			subtitle:
+				'An email login is generally best to start with unless your app will have tight integration with services like Facebook or Twitter, in which case social login is better.',
+			options: [
+				{
+					title: 'Email',
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/email-login-icon.png',
+					price: 2000
+				},
+				{
+					title: 'Social',
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/social-login-icon.png',
+					price: 4000
+				},
+				{
+					title: 'No',
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/no-login-icon.png',
+					price: 0
+				},
+				{
+					title: "I don't know",
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/idk-login-icon.png',
+					price: 0
+				}
+			]
+		};
+
+		dispatch({
+			payload: response,
+			type: FETCH_MOBILE_SUCCESS
+		});
+
+		return response;
+	};
+}
+
+export function fetchMobileProfiles(): ThunkResult<Promise<IQuote>> {
+	return async dispatch => {
+		// initiate request
+		dispatch({
+			type: FETCH_MOBILE_INIT
+		});
+
+		const response: IQuote = {
+			title: 'Do people create personal profiles?',
+			subtitle:
+				'A profile means that some of the people that use your app will have to enter information about themselves that might be viewed publicly.',
+			options: [
+				{
+					title: 'Yes',
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/profile-icon.png',
+					price: 5000
+				},
+				{
+					title: 'No',
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/no-profile-icon.png',
+					price: 0
+				},
+				{
+					title: "I don't know",
+					image:
+						'http://howmuchtomakeanapp.com/img/hmtmaa/icons/idk-profile-icon.png',
+					price: 0
+				}
+			]
+		};
+
+		dispatch({
+			payload: response,
+			type: FETCH_MOBILE_SUCCESS
+		});
+
+		return response;
+	};
+}
+
+export function fetchMobilePayments(): ThunkResult<Promise<IQuote>> {
+	return async dispatch => {
+		// initiate request
+		dispatch({
+			type: FETCH_MOBILE_INIT
 		});
 
 		const response: IQuote = {
@@ -448,18 +715,18 @@ export function fetchPayments(): ThunkResult<Promise<IQuote>> {
 
 		dispatch({
 			payload: response,
-			type: FETCH_PAYMENTS_SUCCESS
+			type: FETCH_MOBILE_SUCCESS
 		});
 
 		return response;
 	};
 }
 
-export function fetchRatings(): ThunkResult<Promise<IQuote>> {
+export function fetchMobileRatings(): ThunkResult<Promise<IQuote>> {
 	return async dispatch => {
 		// initiate request
 		dispatch({
-			type: FETCH_RATINGS_INIT
+			type: FETCH_MOBILE_INIT
 		});
 
 		const response: IQuote = {
@@ -490,18 +757,18 @@ export function fetchRatings(): ThunkResult<Promise<IQuote>> {
 
 		dispatch({
 			payload: response,
-			type: FETCH_RATINGS_SUCCESS
+			type: FETCH_MOBILE_SUCCESS
 		});
 
 		return response;
 	};
 }
 
-export function fetchIntegration(): ThunkResult<Promise<IQuote>> {
+export function fetchMobileIntegration(): ThunkResult<Promise<IQuote>> {
 	return async dispatch => {
 		// initiate request
 		dispatch({
-			type: FETCH_INTEGRATION_INIT
+			type: FETCH_MOBILE_INIT
 		});
 
 		const response: IQuote = {
@@ -532,18 +799,18 @@ export function fetchIntegration(): ThunkResult<Promise<IQuote>> {
 
 		dispatch({
 			payload: response,
-			type: FETCH_INTEGRATION_SUCCESS
+			type: FETCH_MOBILE_SUCCESS
 		});
 
 		return response;
 	};
 }
 
-export function fetchUX(): ThunkResult<Promise<IQuote>> {
+export function fetchMobileUX(): ThunkResult<Promise<IQuote>> {
 	return async dispatch => {
 		// initiate request
 		dispatch({
-			type: FETCH_UX_INIT
+			type: FETCH_MOBILE_INIT
 		});
 
 		const response: IQuote = {
@@ -574,18 +841,18 @@ export function fetchUX(): ThunkResult<Promise<IQuote>> {
 
 		dispatch({
 			payload: response,
-			type: FETCH_UX_SUCCESS
+			type: FETCH_MOBILE_SUCCESS
 		});
 
 		return response;
 	};
 }
 
-export function fetchBranding(): ThunkResult<Promise<IQuote>> {
+export function fetchMobileBranding(): ThunkResult<Promise<IQuote>> {
 	return async dispatch => {
 		// initiate request
 		dispatch({
-			type: FETCH_BRANDING_INIT
+			type: FETCH_MOBILE_INIT
 		});
 
 		const response: IQuote = {
@@ -616,7 +883,7 @@ export function fetchBranding(): ThunkResult<Promise<IQuote>> {
 
 		dispatch({
 			payload: response,
-			type: FETCH_BRANDING_SUCCESS
+			type: FETCH_MOBILE_SUCCESS
 		});
 
 		return response;
@@ -627,7 +894,7 @@ export function fetchDone(price: number): ThunkResult<Promise<IQuote>> {
 	return async dispatch => {
 		// initiate request
 		dispatch({
-			type: FETCH_DONE_INIT
+			type: FETCH_APP_INIT
 		});
 
 		const response: IQuote = {
@@ -638,7 +905,7 @@ export function fetchDone(price: number): ThunkResult<Promise<IQuote>> {
 
 		dispatch({
 			payload: response,
-			type: FETCH_DONE_SUCCESS
+			type: FETCH_APP_SUCCESS
 		});
 
 		return response;
