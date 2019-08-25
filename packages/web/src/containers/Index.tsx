@@ -12,8 +12,8 @@ import * as val3 from '../assets/redval3.png';
 
 const Jumbotron = styled.div`
 	text-align: center !important;
-	padding-top: 17% !important;
-	padding-bottom: 17% !important;
+	padding-top: 16% !important;
+	padding-bottom: 16% !important;
 
 	background: #090c02 url(${val3}) no-repeat center !important;
 	background-size: 90% !important;
@@ -100,7 +100,7 @@ interface IValue {
 }
 
 const Index: React.FC<{}> = () => {
-	const [values, _] = useState<IValue[]>([
+	const [values] = useState<IValue[]>([
 		{
 			image: val1,
 			heading: 'Simplicity',
