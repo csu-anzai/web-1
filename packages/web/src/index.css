@@ -8,7 +8,7 @@ body {
 		'Helvetica Neue', sans-serif !important;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: #090c02 !important;
+	background: #000011 !important;
 	margin: 0 !important;
 	padding: 0 !important;
 	color: #090c02 !important;
@@ -20,8 +20,13 @@ button {
 	font-family: 'Abel', sans-serif !important;
 	font-size: 17px !important;
 	border-radius: 3px !important;
-	box-shadow: 0 4px 20px -20px #111 !important;
+	/* box-shadow: 0 4px 20px -20px #111 !important; */
+	box-shadow: 0px 20px 30px 0px rgba(167, 38, 8, 0.2) !important;
 	letter-spacing: 0px !important;
+}
+
+.no-shadow {
+	box-shadow: none !important;
 }
 
 .red {
@@ -30,8 +35,16 @@ button {
 	background: linear-gradient(to left, #a72608, #d31027) !important;
 }
 
-.blue p {
-	background: rgba(52, 122, 165, 1) !important;
+.green {
+	background: #003943 !important;
+}
+
+.orange {
+	background: #ff5540 !important;
+}
+
+.blue {
+	background: rgba(123, 201, 185, 1) !important;
 }
 
 .purple:hover {
