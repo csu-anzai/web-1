@@ -16,7 +16,7 @@ const Jumbotron = styled.div`
 	padding-bottom: 17% !important;
 
 	background: #090c02 url(${val3}) no-repeat center !important;
-	background-size: 80% !important;
+	background-size: 90% !important;
 	box-shadow: 0px 100px 100px -90px #090c02 inset;
 
 	color: #eee !important;
@@ -70,7 +70,7 @@ const Contact = styled.div`
 `;
 
 const Values = styled.div`
-	padding-bottom: 0px !important;
+	padding: 50px 0px;
 	background: #fff !important;
 	box-shadow: 0 4px 10px -6px #eee !important;
 

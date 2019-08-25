@@ -19,7 +19,7 @@ const Value: React.FC<Props> = props => {
 		<ValueContainer>
 			<Grid columns="equal">
 				{props.iconPosition === 'left' ? (
-					<Grid.Column width={5}>
+					<Grid.Column width={4}>
 						<Image src={props.image} />
 					</Grid.Column>
 				) : null}
@@ -36,7 +36,7 @@ const Value: React.FC<Props> = props => {
 					<Button color="red" content={'Learn More'} />
 				</Grid.Column>
 				{props.iconPosition === 'right' ? (
-					<Grid.Column width={5}>
+					<Grid.Column width={4}>
 						<Image src={props.image} />
 					</Grid.Column>
 				) : null}
