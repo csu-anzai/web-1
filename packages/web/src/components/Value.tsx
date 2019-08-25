@@ -12,14 +12,14 @@ const ColouredIcon = styled(Icon)`
 	color: #aa251c !important;
 `;
 
-interface Props {
+interface IProps {
 	icon: string;
 	heading: string;
 	content: string;
 	iconPosition: 'left' | 'right';
 }
 
-class Value extends React.Component<Props, {}> {
+class Value extends React.Component<IProps, {}> {
 	public render() {
 		const { icon, heading, content, iconPosition } = this.props;
 

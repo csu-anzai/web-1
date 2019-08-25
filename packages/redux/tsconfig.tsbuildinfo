@@ -532,8 +532,7 @@
         "/Users/namishah/Documents/AppMaven/internal/appmaven.io/packages/redux/node_modules/@types",
         "/Users/namishah/Documents/AppMaven/internal/appmaven.io/node_modules/@types"
       ],
-      "project": "/Users/namishah/Documents/AppMaven/internal/appmaven.io/packages/redux/tsconfig.json",
-      "watch": true,
+      "project": "./tsconfig.json",
       "configFilePath": "/Users/namishah/Documents/AppMaven/internal/appmaven.io/packages/redux/tsconfig.json"
     },
     "referencedMap": {
@@ -2039,6 +2038,7 @@
       "/users/namishah/documents/appmaven/internal/appmaven.io/node_modules/redux-persist/src/index.d.ts",
       "/users/namishah/documents/appmaven/internal/appmaven.io/packages/redux/src/store.ts",
       "/users/namishah/documents/appmaven/internal/appmaven.io/packages/redux/src/modules/index.ts",
+      "/users/namishah/documents/appmaven/internal/appmaven.io/packages/redux/src/modules/quote.ts",
       "/users/namishah/documents/appmaven/internal/appmaven.io/packages/redux/src/index.ts",
       "/users/namishah/documents/appmaven/internal/appmaven.io/node_modules/@babel/types/lib/index.d.ts",
       "/users/namishah/documents/appmaven/internal/appmaven.io/node_modules/@types/babel__generator/index.d.ts",
@@ -2124,8 +2124,7 @@
       "/users/namishah/documents/appmaven/internal/appmaven.io/node_modules/@types/stack-utils/index.d.ts",
       "/users/namishah/documents/appmaven/internal/appmaven.io/node_modules/@types/styled-components/index.d.ts",
       "/users/namishah/documents/appmaven/internal/appmaven.io/node_modules/@types/yargs-parser/index.d.ts",
-      "/users/namishah/documents/appmaven/internal/appmaven.io/node_modules/@types/yargs/index.d.ts",
-      "/users/namishah/documents/appmaven/internal/appmaven.io/packages/redux/src/modules/quote.ts"
+      "/users/namishah/documents/appmaven/internal/appmaven.io/node_modules/@types/yargs/index.d.ts"
     ]
   },
   "version": "3.5.3"
