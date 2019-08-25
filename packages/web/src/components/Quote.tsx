@@ -53,9 +53,15 @@ const OptionTitle = styled.p`
 	text-align: center;
 `;
 
+interface IBreakdown {
+	title: string;
+	subtitle: string;
+	option: IOption;
+}
+
 const Quote: React.FunctionComponent<{}> = props => {
 	const [counter, setCounter] = useState(0);
-	const [price, setPrice] = useState<number[]>([]);
+	const [price, setPrice] = useState<IBreakdown[]>([]);
 	const dispatch = useDispatch();
 
 	const options = useSelector<IStore, IOption[]>(
@@ -105,9 +111,11 @@ const Quote: React.FunctionComponent<{}> = props => {
 	}, [counter]);
 
 	const getPrice = () => {
-		return price.length > 0
-			? price.slice(0, counter).reduce((a, b) => a + b)
-			: 0;
+		let sum = 0;
+		for (const item of price.slice(0, counter)) {
+			sum += item.option.price;
+		}
+		return sum;
 	};
 
 	return (
@@ -206,7 +214,11 @@ const Quote: React.FunctionComponent<{}> = props => {
 								<OptionImage
 									onClick={() => {
 										setCounter(counter + 1);
-										price.push(option.price);
+										price.push({
+											option,
+											title,
+											subtitle
+										});
 										setPrice(price);
 									}}
 									src={option.image}
@@ -223,6 +235,16 @@ const Quote: React.FunctionComponent<{}> = props => {
 							display: counter === MAX_COUNTER ? 'flex' : 'none'
 						}}
 					>
+						<AltTitle>
+							{price.map(breakdown => {
+								return (
+									breakdown.title +
+									'[' +
+									breakdown.option.title +
+									'], '
+								);
+							})}
+						</AltTitle>
 						<OptionImage
 							size={'medium'}
 							circular={true}
