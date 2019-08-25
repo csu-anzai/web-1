@@ -17,9 +17,9 @@ const Jumbotron = styled.div`
 	padding-top: 18% !important;
 	padding-bottom: 18% !important;
 
-	background: #a72608 url(${val3}) !important;
-	/* background-size: 100% !important; */
-	box-shadow: 0px 100px 100px -90px #000 inset;
+	background: #090c02 url(${val3}) no-repeat center !important;
+	background-size: 80% !important;
+	box-shadow: 0px 100px 100px -90px #090c02 inset;
 
 	color: #eee !important;
 	z-index: 10000;
@@ -72,7 +72,6 @@ const Contact = styled.div`
 `;
 
 const Values = styled.div`
-	padding: 20px 0;
 	padding-bottom: 0px !important;
 	background: #fff !important;
 	box-shadow: 0 4px 10px -6px #eee !important;
@@ -160,15 +159,17 @@ class Index extends React.Component<any, any> {
 		return (
 			<React.Fragment>
 				<Jumbotron>
-					<Slogan>Beautiful. Elegant. Innovative.</Slogan>
+					<Slogan>
+						Beautiful<span>.</span> Elegant. Innovative.
+					</Slogan>
 					<SecondarySlogan>
-						The Factom® Protocol is a blockchain utilized by the U.S
-						Department of Homeland Security and the Bill and Melinda
-						Gates Foundation. The protocol provides easy integration
-						into legacy systems without the need to handle
-						cryptocurrency.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Etiam non dolor eros. Praesent ut tempor elit.
+						Suspendisse convallis mauris sapien, nec consequat arcu
+						bibendum sedLorem ipsum dolor sit amet, consectetur
+						adipiscing elit. Etiam non dolor eros.
 					</SecondarySlogan>
-					<Button color={'blue'} content="Request Quote" />
+					<Button color={'red'} content="Request Quote" />
 				</Jumbotron>
 				<Values>
 					{values.map(value => (

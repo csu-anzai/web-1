@@ -15,7 +15,7 @@ body {
 }
 
 button {
-	padding: 10px 30px !important;
+	padding: 13px 30px !important;
 	border-radius: 0 !important;
 	font-family: 'Abel', sans-serif !important;
 	font-size: 17px !important;
@@ -26,8 +26,8 @@ button {
 
 .red {
 	background: #a72608 !important;
-	background: -webkit-linear-gradient(to left, #a72608, #d31027) !important;
-	background: linear-gradient(to left, #a72608, #d31027) !important;
+	/* background: -webkit-linear-gradient(to left, #a72608, #d31027) !important; */
+	/* background: linear-gradient(to left, #a72608, #d31027) !important; */
 }
 
 .blue p {

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Container, Grid, Icon, Image, Button } from 'semantic-ui-react';
 
 const ValueContainer = styled(Container)`
-	padding: 100px 50px;
+	padding: 100px 0px;
 `;
 
 const ColouredIcon = styled(Icon)`
