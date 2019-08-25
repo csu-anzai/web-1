@@ -6,16 +6,14 @@ import Wrapper from '../components/Wrapper';
 
 import Index from '../containers/Index';
 
-class App extends React.Component<any, any> {
-	public render() {
-		return (
-			<BrowserRouter>
-				<Wrapper>
-					<Route exact={true} path="/" component={Index} />
-				</Wrapper>
-			</BrowserRouter>
-		);
-	}
-}
+const App: React.FC<{}> = () => {
+	return (
+		<BrowserRouter>
+			<Wrapper>
+				<Route exact={true} path="/" component={Index} />
+			</Wrapper>
+		</BrowserRouter>
+	);
+};
 
 export default App;
