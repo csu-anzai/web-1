@@ -2,6 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
+import { Link } from 'react-router-dom';
 import { Button } from 'semantic-ui-react';
 
 import * as bg from '../assets/redval3.png';
@@ -45,15 +46,18 @@ const Jumbotron: React.FC<{}> = () => {
 	return (
 		<SJumbotron>
 			<SSlogan>
-				Beautiful<span>.</span> Elegant. Innovative.
+				Simplicity<span>.</span> Innovative. Elegance.
 			</SSlogan>
 			<SSecondSlogan>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-				non dolor eros. Praesent ut tempor elit. Suspendisse convallis
-				mauris sapien, nec consequat arcu bibendum sedLorem ipsum dolor
-				sit amet, consectetur adipiscing elit. Etiam non dolor eros.
+				Our IT consulting service helps define your business’ IT
+				strategy. IT moves at a lightning pace and our consulting
+				services will ensure that the right technology and the right
+				strategy is used within your business to deliver the most
+				effective approach to IT.
 			</SSecondSlogan>
-			<Button circular={true} color={'red'} content="Request Quote" />
+			<Link to={'/quote'}>
+				<Button circular={true} color={'red'} content="Request Quote" />
+			</Link>
 		</SJumbotron>
 	);
 };
