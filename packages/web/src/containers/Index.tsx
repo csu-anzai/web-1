@@ -6,24 +6,23 @@ import { Button, Container, Grid } from 'semantic-ui-react';
 
 import Value from '../components/Value';
 
+import * as shapes from '../assets/redval3.png';
+import * as tilted from '../assets/tilted2.png';
+
 import * as val1 from '../assets/redval1.png';
-import * as val2 from '../assets/redval2.png';
+import * as val2 from '../assets/redval3.png';
 import * as val3 from '../assets/redval3.png';
 
 const Jumbotron = styled.div`
 	text-align: center !important;
-	padding-top: 17% !important;
-	padding-bottom: 17% !important;
-
-	background: #090c02 url(${val3}) no-repeat center !important;
-	background-size: 80% !important;
-	box-shadow: 0px 100px 100px -90px #090c02 inset;
-
+	padding-top: 16% !important;
+	padding-bottom: 21% !important;
 	color: #eee !important;
 	z-index: 10000;
-
+	background: #011126 url(${shapes}) no-repeat center !important;
+	background-size: 100% !important;
+	box-shadow: 0px 100px 100px -50px #000011 inset;
 	line-height: 1 !important;
-
 	margin-top: -120px;
 `;
 
@@ -69,10 +68,29 @@ const Contact = styled.div`
 	padding-top: 50px;
 `;
 
+const SBlackCont = styled.div`
+	background: #090c02;
+`;
+
+const SBlueCont = styled.div`
+	background: rgb(16, 28, 46);
+`;
+
+const SWhiteCont = styled.div`
+	background: #fff;
+`;
+
+const SCurve = styled.div`
+	background: url(${tilted}) no-repeat !important;
+	background-size: 100%;
+	height: 250px;
+	margin-top: -250px;
+`;
+
 const Values = styled.div`
-	padding-bottom: 0px !important;
-	background: #fff !important;
+	padding-bottom: 40px !important;
 	box-shadow: 0 4px 10px -6px #eee !important;
+	background: #fff !important;
 
 	& div.welcome {
 		width: 100%;
@@ -92,6 +110,14 @@ const Values = styled.div`
 	}
 `;
 
+const Heading = styled.div`
+	text-align: center;
+	font-size: 40px;
+	font-weight: 300 !important;
+	padding-top: 70px;
+	font-family: 'Abel', sans-serif;
+`;
+
 interface IValue {
 	image: any;
 	heading: string;
@@ -100,7 +126,7 @@ interface IValue {
 }
 
 const Index: React.FC<{}> = () => {
-	const [values, _] = useState<IValue[]>([
+	const [values] = useState<IValue[]>([
 		{
 			image: val1,
 			heading: 'Simplicity',
@@ -155,29 +181,41 @@ const Index: React.FC<{}> = () => {
 
 	return (
 		<React.Fragment>
-			<Jumbotron>
-				<Slogan>
-					Beautiful<span>.</span> Elegant. Innovative.
-				</Slogan>
-				<SecondarySlogan>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Etiam non dolor eros. Praesent ut tempor elit. Suspendisse
-					convallis mauris sapien, nec consequat arcu bibendum
-					sedLorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Etiam non dolor eros.
-				</SecondarySlogan>
-				<Button color={'red'} content="Request Quote" />
-			</Jumbotron>
-			<Values>
-				{values.map(value => (
-					<Value
-						image={value.image}
-						heading={value.heading}
-						content={value.content}
-						iconPosition={value.iconPosition}
+			<SWhiteCont>
+				<Jumbotron>
+					<Slogan>
+						Beautiful<span>.</span> Elegant. Innovative.
+					</Slogan>
+					<SecondarySlogan>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Etiam non dolor eros. Praesent ut tempor elit.
+						Suspendisse convallis mauris sapien, nec consequat arcu
+						bibendum sedLorem ipsum dolor sit amet, consectetur
+						adipiscing elit. Etiam non dolor eros.
+					</SecondarySlogan>
+					<Button
+						circular={true}
+						color={'red'}
+						content="Request Quote"
 					/>
-				))}
-			</Values>
+				</Jumbotron>
+			</SWhiteCont>
+			<SCurve></SCurve>
+			<SWhiteCont>
+				<Values>
+					<Container>
+						<Heading>Our Values</Heading>
+					</Container>
+					{values.map(value => (
+						<Value
+							image={value.image}
+							heading={value.heading}
+							content={value.content}
+							iconPosition={value.iconPosition}
+						/>
+					))}
+				</Values>
+			</SWhiteCont>
 			<Portfolio>
 				<Container>
 					<h1>Portfolio</h1>
@@ -205,11 +243,13 @@ const Index: React.FC<{}> = () => {
 					</Grid>
 				</Container>
 			</Portfolio>
-			<Contact>
-				<Container>
-					<h1>Contact Us</h1>
-				</Container>
-			</Contact>
+			<SBlackCont>
+				<Contact>
+					<Container>
+						<h1>Contact Us</h1>
+					</Container>
+				</Contact>
+			</SBlackCont>
 		</React.Fragment>
 	);
 };
