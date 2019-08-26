@@ -208,7 +208,9 @@ const Quote: React.FunctionComponent<{}> = props => {
 								color: '#ed213a'
 							}}
 						>
-							{counter < MAX_COUNTER ? 'back' : 'home'}
+							{counter < MAX_COUNTER
+								? '\u2190 back'
+								: '\u21BB restart'}
 						</a>
 					</AltTitle>
 				</Column>
