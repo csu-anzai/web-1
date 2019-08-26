@@ -8,28 +8,42 @@ body {
 		'Helvetica Neue', sans-serif !important;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: #f4f5f7 !important;
+	background: #000011 !important;
 	margin: 0 !important;
 	padding: 0 !important;
+	color: #090c02 !important;
 }
 
 button {
-	padding: 15px 50px !important;
-	border-radius: 0 !important;
+	padding: 13px 30px !important;
 	font-family: 'Abel', sans-serif !important;
 	font-size: 17px !important;
-	border-radius: 5px !important;
-	box-shadow: 0 4px 20px -20px #111 !important;
-	font-weight: normal !important;
+	/* border-radius: 3px !important; */
+	/* box-shadow: 0 4px 20px -20px #111 !important; */
+	box-shadow: 0px 20px 30px 0px rgba(167, 38, 8, 0.2) !important;
+	letter-spacing: 0px !important;
+}
+
+.no-shadow {
+	box-shadow: none !important;
 }
 
 .red {
-	background: #ed213a url(${bg}) !important;
-	background: -webkit-linear-gradient(to left, #ea384d, #d31027) !important;
-	background: linear-gradient(to left, #ea384d, #d31027) !important;
-	-webkit-box-shadow: 5px 5px 0px 0px rgba(255, 255, 255, 0.31) !important;
-	-moz-box-shadow: 5px 5px 0px 0px rgba(255, 255, 255, 0.31) !important;
-	box-shadow: 5px 5px 0px 0px rgba(255, 255, 255, 0.31) !important;
+	background: #a72608 !important;
+	background: -webkit-linear-gradient(to left, #a72608, #d31027) !important;
+	background: linear-gradient(to left, #a72608, #d31027) !important;
+}
+
+.green {
+	background: #003943 !important;
+}
+
+.orange {
+	background: #ff5540 !important;
+}
+
+.blue {
+	background: rgba(123, 201, 185, 1) !important;
 }
 
 .purple:hover {

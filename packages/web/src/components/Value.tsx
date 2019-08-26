@@ -1,63 +1,49 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { config, Spring } from 'react-spring/renderprops';
-import { Container, Grid, Icon } from 'semantic-ui-react';
+import { Button, Container, Grid, Image } from 'semantic-ui-react';
 
 const ValueContainer = styled(Container)`
-	padding: 100px 50px;
-`;
-
-const ColouredIcon = styled(Icon)`
-	color: #aa251c !important;
+	padding: 80px 0px;
+	padding-bottom: 100px;
 `;
 
 interface IProps {
-	icon: string;
+	image: any;
 	heading: string;
 	content: string;
 	iconPosition: 'left' | 'right';
 }
 
-class Value extends React.Component<IProps, {}> {
-	public render() {
-		const { icon, heading, content, iconPosition } = this.props;
-
-		return (
-			<Spring
-				from={{ opacity: 0, marginBottom: 200 }}
-				to={{ opacity: 1, marginBottom: 0 }}
-				config={config.molasses}
-			>
-				{props => (
-					<ValueContainer style={props}>
-						<Grid columns="equal">
-							{iconPosition === 'left' ? (
-								<Grid.Column width={3}>
-									<ColouredIcon name={icon} size="massive" />
-								</Grid.Column>
-							) : null}
-							<Grid.Column>
-								<h2>{heading}</h2>
-								{content}
-								<br />
-								<br />
-								Etiam non dolor eros. Praesent ut tempor elit.
-								Suspendisse convallis mauris sapien, nec
-								consequat arcu bibendum sed. Nec consequat arcu
-								bibendum sed.
-							</Grid.Column>
-							{iconPosition === 'right' ? (
-								<Grid.Column width={3}>
-									<ColouredIcon name={icon} size="massive" />
-								</Grid.Column>
-							) : null}
-						</Grid>
-					</ValueContainer>
-				)}
-			</Spring>
-		);
-	}
-}
+const Value: React.FC<IProps> = props => {
+	return (
+		<ValueContainer>
+			<Grid columns="equal">
+				{props.iconPosition === 'left' ? (
+					<Grid.Column width={4}>
+						<Image src={props.image} />
+					</Grid.Column>
+				) : null}
+				<Grid.Column>
+					<h2>{props.heading}</h2>
+					{props.content}
+					<br />
+					<br />
+					Etiam non dolor eros. Praesent ut tempor elit. Suspendisse
+					convallis mauris sapien, nec consequat arcu bibendum sed.
+					Nec consequat arcu bibendum sed.
+					<br />
+					<br />
+					<Button color="red" content={'Learn More'} />
+				</Grid.Column>
+				{props.iconPosition === 'right' ? (
+					<Grid.Column width={4}>
+						<Image src={props.image} />
+					</Grid.Column>
+				) : null}
+			</Grid>
+		</ValueContainer>
+	);
+};
 
 export default Value;

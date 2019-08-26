@@ -10,7 +10,7 @@ import Quote from '../containers/Quote';
 
 import { getStores } from '@appmaven/redux';
 
-const App: React.FunctionComponent<{}> = props => {
+const App: React.FunctionComponent<{}> = () => {
 	const stores = getStores();
 	return (
 		<Provider store={stores.store}>
