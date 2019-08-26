@@ -12,7 +12,7 @@ import Value from '../components/Value';
 import * as tilted from '../assets/tilted2.png';
 
 import * as val1 from '../assets/redval1.png';
-import * as val2 from '../assets/redval3.png';
+import * as val2 from '../assets/redval2.png';
 import * as val3 from '../assets/redval3.png';
 
 const SBlackCont = styled.div`
