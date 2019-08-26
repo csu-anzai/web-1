@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import { Button, Container, Grid, Image } from 'semantic-ui-react';
 
 const ValueContainer = styled(Container)`
-	padding: 100px 0px;
+	padding: 80px 0px;
+	padding-bottom: 100px;
 `;
 
 interface Props {

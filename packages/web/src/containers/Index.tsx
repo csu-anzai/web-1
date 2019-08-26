@@ -110,6 +110,10 @@ const Values = styled.div`
 	}
 `;
 
+const SCenter = styled.div`
+	text-align: center;
+`;
+
 interface IValue {
 	image: any;
 	heading: string;
@@ -185,11 +189,15 @@ const Index: React.FC<{}> = () => {
 						bibendum sedLorem ipsum dolor sit amet, consectetur
 						adipiscing elit. Etiam non dolor eros.
 					</SecondarySlogan>
-					<Button color={'red'} content="Request Quote" />
+					<Button
+						circular={true}
+						color={'red'}
+						content="Request Quote"
+					/>
 				</Jumbotron>
 			</SWhiteCont>
 			<SCurve></SCurve>
-			<SBlueCont>
+			<SWhiteCont>
 				<Values>
 					{values.map(value => (
 						<Value
@@ -200,7 +208,7 @@ const Index: React.FC<{}> = () => {
 						/>
 					))}
 				</Values>
-			</SBlueCont>
+			</SWhiteCont>
 			<Portfolio>
 				<Container>
 					<h1>Portfolio</h1>

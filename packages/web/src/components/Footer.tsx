@@ -7,7 +7,7 @@ const FooterWrapper = styled.div`
 	background: #000011 !important;
 	background: -webkit-linear-gradient(to left, #ea384d, #d31027);
 	background: linear-gradient(to left, #ea384d, #d31027);
-	height: 400px;
+	height: 500px;
 	width: 100%;
 `;
 

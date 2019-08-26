@@ -16,10 +16,9 @@ body {
 
 button {
 	padding: 13px 30px !important;
-	border-radius: 0 !important;
 	font-family: 'Abel', sans-serif !important;
 	font-size: 17px !important;
-	border-radius: 3px !important;
+	/* border-radius: 3px !important; */
 	/* box-shadow: 0 4px 20px -20px #111 !important; */
 	box-shadow: 0px 20px 30px 0px rgba(167, 38, 8, 0.2) !important;
 	letter-spacing: 0px !important;
