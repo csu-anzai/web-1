@@ -2,78 +2,21 @@ import React, { useState } from 'react';
 
 import styled from 'styled-components';
 
-import { Button, Container, Grid } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
 
+import Contact from '../components/Contact';
+import Jumbotron from '../components/Jumbotron';
+import Portfolio from '../components/Portfolio';
 import Value from '../components/Value';
 
-import * as shapes from '../assets/redval3.png';
 import * as tilted from '../assets/tilted2.png';
 
 import * as val1 from '../assets/redval1.png';
 import * as val2 from '../assets/redval3.png';
 import * as val3 from '../assets/redval3.png';
 
-const Jumbotron = styled.div`
-	text-align: center !important;
-	padding-top: 16% !important;
-	padding-bottom: 21% !important;
-	color: #eee !important;
-	z-index: 10000;
-	background: #011126 url(${shapes}) no-repeat center !important;
-	background-size: 100% !important;
-	box-shadow: 0px 100px 100px -50px #000011 inset;
-	line-height: 1 !important;
-	margin-top: -120px;
-`;
-
-const Slogan = styled.div`
-	width: 70% !important;
-	margin: auto;
-	text-shadow: 1px 1px #111 !important;
-	font-size: 35px;
-	font-family: 'Abel', sans-serif;
-	display: block;
-	margin-bottom: 20px;
-	font-weight: bold;
-`;
-
-const SecondarySlogan = styled.div`
-	font-size: 18px;
-	width: 50%;
-	margin: auto;
-	font-family: 'Abel', sans-serif;
-	text-shadow: 1px 1px #111 !important;
-	display: block;
-	margin-bottom: 40px;
-	font-weight: bold;
-`;
-
-const Portfolio = styled.div`
-	background: #f4f5f7 !important;
-	padding-top: 50px;
-	padding-bottom: 100px;
-`;
-
-const PortfolioItem = styled.div`
-	background: #fff;
-	box-shadow: 0 4px 10px -6px #eee !important;
-	height: 350px;
-	width: 100%;
-`;
-
-const Contact = styled.div`
-	box-shadow: 0 4px 10px -6px #eee !important;
-	height: 700px;
-	background: #fff;
-	padding-top: 50px;
-`;
-
 const SBlackCont = styled.div`
 	background: #090c02;
-`;
-
-const SBlueCont = styled.div`
-	background: rgb(16, 28, 46);
 `;
 
 const SWhiteCont = styled.div`
@@ -182,23 +125,7 @@ const Index: React.FC<{}> = () => {
 	return (
 		<React.Fragment>
 			<SWhiteCont>
-				<Jumbotron>
-					<Slogan>
-						Beautiful<span>.</span> Elegant. Innovative.
-					</Slogan>
-					<SecondarySlogan>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Etiam non dolor eros. Praesent ut tempor elit.
-						Suspendisse convallis mauris sapien, nec consequat arcu
-						bibendum sedLorem ipsum dolor sit amet, consectetur
-						adipiscing elit. Etiam non dolor eros.
-					</SecondarySlogan>
-					<Button
-						circular={true}
-						color={'red'}
-						content="Request Quote"
-					/>
-				</Jumbotron>
+				<Jumbotron />
 			</SWhiteCont>
 			<SCurve></SCurve>
 			<SWhiteCont>
@@ -216,39 +143,9 @@ const Index: React.FC<{}> = () => {
 					))}
 				</Values>
 			</SWhiteCont>
-			<Portfolio>
-				<Container>
-					<h1>Portfolio</h1>
-					<Grid columns="equal">
-						<Grid.Column>
-							<PortfolioItem />
-						</Grid.Column>
-						<Grid.Column>
-							<PortfolioItem />
-						</Grid.Column>
-						<Grid.Column>
-							<PortfolioItem />
-						</Grid.Column>
-					</Grid>
-					<Grid columns="equal">
-						<Grid.Column>
-							<PortfolioItem />
-						</Grid.Column>
-						<Grid.Column>
-							<PortfolioItem />
-						</Grid.Column>
-						<Grid.Column>
-							<PortfolioItem />
-						</Grid.Column>
-					</Grid>
-				</Container>
-			</Portfolio>
+			<Portfolio />
 			<SBlackCont>
-				<Contact>
-					<Container>
-						<h1>Contact Us</h1>
-					</Container>
-				</Contact>
+				<Contact />
 			</SBlackCont>
 		</React.Fragment>
 	);
