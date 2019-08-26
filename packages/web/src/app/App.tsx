@@ -15,10 +15,10 @@ const App: React.FunctionComponent<{}> = () => {
 	return (
 		<Provider store={stores.store}>
 			<BrowserRouter>
-				{/* <Wrapper> */}
-				<Route exact={true} path="/" component={Index} />
-				<Route exact={true} path="/quote" component={Quote} />
-				{/* </Wrapper> */}
+				<Wrapper>
+					<Route exact={true} path="/" component={Index} />
+					<Route exact={true} path="/quote" component={Quote} />
+				</Wrapper>
 			</BrowserRouter>
 		</Provider>
 	);
