@@ -28,7 +28,7 @@ const SGrey = styled.div`
 const Portfolio: React.FC<{}> = () => {
 	return (
 		<>
-			<SWhite>
+			<SGrey>
 				<Container fluid={true}>
 					<SItem>
 						<Grid columns={'equal'}>
@@ -83,8 +83,8 @@ const Portfolio: React.FC<{}> = () => {
 						</Grid>
 					</SItem>
 				</Container>
-			</SWhite>
-			<SGrey>
+			</SGrey>
+			<SWhite>
 				<Container fluid={true}>
 					<SItem>
 						<Grid columns={'equal'}>
@@ -139,8 +139,8 @@ const Portfolio: React.FC<{}> = () => {
 						</Grid>
 					</SItem>
 				</Container>
-			</SGrey>
-			<SWhite>
+			</SWhite>
+			<SGrey>
 				<Container fluid={true}>
 					<SItem>
 						<Grid columns={'equal'}>
@@ -195,7 +195,7 @@ const Portfolio: React.FC<{}> = () => {
 						</Grid>
 					</SItem>
 				</Container>
-			</SWhite>
+			</SGrey>
 		</>
 	);
 };
