@@ -1,18 +1,26 @@
 import React from 'react';
 
+import { Provider } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import Wrapper from '../components/Wrapper';
 
 import Index from '../containers/Index';
+import Quote from '../containers/Quote';
 
-const App: React.FC<{}> = () => {
+import { getStores } from '@appmaven/redux';
+
+const App: React.FunctionComponent<{}> = () => {
+	const stores = getStores();
 	return (
-		<BrowserRouter>
-			<Wrapper>
+		<Provider store={stores.store}>
+			<BrowserRouter>
+				{/* <Wrapper> */}
 				<Route exact={true} path="/" component={Index} />
-			</Wrapper>
-		</BrowserRouter>
+				<Route exact={true} path="/quote" component={Quote} />
+				{/* </Wrapper> */}
+			</BrowserRouter>
+		</Provider>
 	);
 };
 

@@ -12,5 +12,14 @@
 		"clean": "rm -rf ./node_modules/ && rm -rf dist/ && rm -rf package-lock.json && rm -rf tsconfig.tsbuildinfo",
 		"build": "tsc -p ./tsconfig.json"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"redux-logger": "^3.0.6",
+		"redux-persist": "^5.10.0",
+		"redux-thunk": "^2.3.0"
+	},
+	"devDependencies": {
+		"@types/redux-logger": "^3.0.7",
+		"@types/redux-persist": "^4.3.1",
+		"@types/redux-thunk": "^2.1.0"
+	}
 }

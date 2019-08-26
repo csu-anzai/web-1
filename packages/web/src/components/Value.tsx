@@ -8,14 +8,14 @@ const ValueContainer = styled(Container)`
 	padding-bottom: 100px;
 `;
 
-interface Props {
+interface IProps {
 	image: any;
 	heading: string;
 	content: string;
 	iconPosition: 'left' | 'right';
 }
 
-const Value: React.FC<Props> = props => {
+const Value: React.FC<IProps> = props => {
 	return (
 		<ValueContainer>
 			<Grid columns="equal">
