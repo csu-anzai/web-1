@@ -110,8 +110,12 @@ const Values = styled.div`
 	}
 `;
 
-const SCenter = styled.div`
+const Heading = styled.div`
 	text-align: center;
+	font-size: 40px;
+	font-weight: 300 !important;
+	padding-top: 70px;
+	font-family: 'Abel', sans-serif;
 `;
 
 interface IValue {
@@ -199,6 +203,9 @@ const Index: React.FC<{}> = () => {
 			<SCurve></SCurve>
 			<SWhiteCont>
 				<Values>
+					<Container>
+						<Heading>Our Values</Heading>
+					</Container>
 					{values.map(value => (
 						<Value
 							image={value.image}
