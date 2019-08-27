@@ -32,13 +32,7 @@ const Portfolio: React.FC<{}> = () => {
 				<Container fluid={true}>
 					<SItem>
 						<Grid columns={'equal'}>
-							<Grid.Column width={5}>
-								<Image
-									src={
-										'https://github.com/mosaicnetworks/evm-lite-wallet/raw/1.x/assets/accounts.png'
-									}
-								/>
-							</Grid.Column>
+							<Grid.Column width={5}></Grid.Column>
 							<Grid.Column width={1}></Grid.Column>
 							<Grid.Column>
 								<Image
@@ -129,13 +123,7 @@ const Portfolio: React.FC<{}> = () => {
 								pharetra a, hendrerit et dui.
 							</Grid.Column>
 							<Grid.Column width={1}></Grid.Column>
-							<Grid.Column width={5}>
-								<Image
-									src={
-										'https://github.com/mosaicnetworks/evm-lite-wallet/raw/1.x/assets/accounts.png'
-									}
-								/>
-							</Grid.Column>
+							<Grid.Column width={5}></Grid.Column>
 						</Grid>
 					</SItem>
 				</Container>
@@ -144,13 +132,7 @@ const Portfolio: React.FC<{}> = () => {
 				<Container fluid={true}>
 					<SItem>
 						<Grid columns={'equal'}>
-							<Grid.Column width={5}>
-								<Image
-									src={
-										'https://github.com/mosaicnetworks/evm-lite-wallet/raw/1.x/assets/accounts.png'
-									}
-								/>
-							</Grid.Column>
+							<Grid.Column width={5}></Grid.Column>
 							<Grid.Column width={1}></Grid.Column>
 							<Grid.Column>
 								<Image
