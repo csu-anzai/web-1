@@ -7,7 +7,7 @@ import { Button, Container, Image } from 'semantic-ui-react';
 
 import Header from '../components/Header';
 
-import * as bg from '../assets/redval3.png';
+import * as bg from '../assets/shapes.png';
 import * as tilted from '../assets/tilted2.png';
 
 const SJumbotron = styled.div`
@@ -62,7 +62,7 @@ const SFaintHeading = styled.div`
 
 const SWhoWeAre = styled.div`
 	background: #fff !important;
-	box-shadow: 0 4px 10px -6px #eee !important;
+	/* box-shadow: 0 4px 10px -6px #eee !important; */
 	text-align: center;
 
 	padding-top: 70px;

@@ -9,6 +9,7 @@ import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import { Container, Image } from 'semantic-ui-react';
 
 import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 import Jumbotron from '../components/Jumbotron';
 import Portfolio from '../components/Portfolio';
 
@@ -27,10 +28,8 @@ const Index: React.FC<{}> = () => {
 	return (
 		<>
 			<Parallax ref={ref => (parallax = ref)} pages={3}>
-				<Layer offset={0} speed={0}>
-					<Jumbotron />
-				</Layer>
-				<Layer offset={1} speed={1}>
+				<Jumbotron />
+				<Layer offset={0.1} speed={0.3}>
 					<Portfolio />
 				</Layer>
 			</Parallax>
