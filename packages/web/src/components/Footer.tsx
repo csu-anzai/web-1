@@ -49,7 +49,10 @@ const SColumn = styled(Grid.Column)`
 	color: #efefef;
 `;
 
-const SIcon = styled(Icon)``;
+const SIcon = styled(Icon)`
+	margin: 0 !important;
+	padding: 0 !important;
+`;
 
 const Footer: React.FC<{}> = () => {
 	return (

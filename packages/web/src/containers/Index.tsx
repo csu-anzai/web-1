@@ -27,12 +27,9 @@ const Index: React.FC<{}> = () => {
 
 	return (
 		<>
-			<Parallax ref={ref => (parallax = ref)} pages={3}>
-				<Jumbotron />
-				<Layer offset={0.1} speed={0.3}>
-					<Portfolio />
-				</Layer>
-			</Parallax>
+			<Jumbotron />
+			<Portfolio />
+			<Footer />
 		</>
 	);
 };

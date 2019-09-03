@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { Container, Grid, Image } from 'semantic-ui-react';
 
-import * as port1 from '../assets/redval1.png';
+import * as port1 from '../assets/redval3.png';
 
 const SWhite = styled.div`
 	background: #fff !important;
@@ -16,6 +16,12 @@ const SWhite = styled.div`
 const SItem = styled.div`
 	padding: 100px 150px;
 	width: 100%;
+`;
+
+const SImageColumn = styled(Grid.Column)`
+	& img {
+		object-fit: cover !important;
+	}
 `;
 
 const SGrey = styled.div`
@@ -32,7 +38,18 @@ const Portfolio: React.FC<{}> = () => {
 				<Container fluid={true}>
 					<SItem>
 						<Grid columns={'equal'}>
-							<Grid.Column width={5}></Grid.Column>
+							<SImageColumn
+								textAlign="center"
+								verticalAlign={'middle'}
+								width={5}
+							>
+								<Image
+									src={
+										'https://www.stickpng.com/assets/images/5cb0633d80f2cf201a4c3253.png'
+									}
+									width={1000}
+								/>
+							</SImageColumn>
 							<Grid.Column width={1}></Grid.Column>
 							<Grid.Column>
 								<Image
@@ -122,8 +139,18 @@ const Portfolio: React.FC<{}> = () => {
 								et sollicitudin mi. Nulla elit nisi, cursus ac
 								pharetra a, hendrerit et dui.
 							</Grid.Column>
-							<Grid.Column width={1}></Grid.Column>
-							<Grid.Column width={5}></Grid.Column>
+							<SImageColumn
+								width={8}
+								textAlign="center"
+								verticalAlign={'middle'}
+							>
+								<Image
+									src={
+										'https://www.sccpre.cat/mypng/full/167-1675137_macbook-pro-2018-psd-mockup-macbook-pro-2018.png'
+									}
+									width={2000}
+								/>
+							</SImageColumn>
 						</Grid>
 					</SItem>
 				</Container>
@@ -132,7 +159,18 @@ const Portfolio: React.FC<{}> = () => {
 				<Container fluid={true}>
 					<SItem>
 						<Grid columns={'equal'}>
-							<Grid.Column width={5}></Grid.Column>
+							<Grid.Column
+								textAlign="center"
+								verticalAlign={'middle'}
+								width={7}
+							>
+								<Image
+									src={
+										'http://www.pngmart.com/files/3/Software-PNG-Picture.png'
+									}
+									width={2000}
+								/>
+							</Grid.Column>
 							<Grid.Column width={1}></Grid.Column>
 							<Grid.Column>
 								<Image

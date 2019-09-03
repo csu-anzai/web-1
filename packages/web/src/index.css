@@ -57,3 +57,7 @@ h4,
 h5 {
 	font-family: 'Abel', sans-serif !important;
 }
+
+img.ui.image {
+	object-fit: cover !important;
+}
