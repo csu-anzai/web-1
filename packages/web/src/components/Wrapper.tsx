@@ -6,9 +6,9 @@ import Header from './Header';
 const Wrapper: React.FC<{}> = props => {
 	return (
 		<React.Fragment>
-			<Header />
+			{/* <Header /> */}
 			{props.children}
-			<Footer />
+			{/* <Footer /> */}
 		</React.Fragment>
 	);
 };

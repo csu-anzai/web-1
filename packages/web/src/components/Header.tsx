@@ -2,6 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
+import { Link } from 'react-router-dom';
 import { Container, Image } from 'semantic-ui-react';
 
 import * as logo from '../assets/brand2/logo_transparent.png';
@@ -38,7 +39,9 @@ const Header: React.FC = () => {
 	return (
 		<HeaderWrapper>
 			<Container fluid={false}>
-				<Logo src={logo} width={140} />
+				<Link to={'/'}>
+					<Logo src={logo} width={140} />
+				</Link>
 				<Navigation>
 					<a href="/">
 						<li>Porfolio</li>
