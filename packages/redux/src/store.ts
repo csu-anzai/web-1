@@ -13,7 +13,7 @@ export interface IStore {
 	quote: IQuoteState;
 }
 
-const persistConfig: PersistConfig = {
+const persistConfig: PersistConfig<IStore> = {
 	key: 'root',
 	storage: dynamicStorage,
 	whitelist: ['config']
