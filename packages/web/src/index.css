@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro&display=swap');
+
+body {
+	margin: 0;
+	font-family: 'Maven Pro', sans-serif !important;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: #fff !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	font-size: 16px;
+	color: #090c02 !important;
+}
+
+button {
+	padding: 13px 30px !important;
+	font-family: 'Abel', sans-serif !important;
+	font-size: 17px !important;
+	/* border-radius: 3px !important; */
+	/* box-shadow: 0 4px 20px -20px #111 !important; */
+	box-shadow: 0px 20px 30px 0px rgba(167, 38, 8, 0.2) !important;
+	letter-spacing: 0px !important;
+}
+
+.no-shadow {
+	box-shadow: none !important;
+}
+
+.red {
+	background: #a72608 !important;
+	background: -webkit-linear-gradient(to left, #a72608, #d31027) !important;
+	background: linear-gradient(to left, #a72608, #d31027) !important;
+}
+
+.green {
+	background: #003943 !important;
+}
+
+.orange {
+	background: #ff5540 !important;
+}
+
+.blue {
+	background: rgba(123, 201, 185, 1) !important;
+}
+
+.purple:hover {
+	background-position: right center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Abel', sans-serif !important;
+}
+
+img.ui.image {
+	object-fit: cover !important;
+}
