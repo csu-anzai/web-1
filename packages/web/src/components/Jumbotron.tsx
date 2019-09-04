@@ -12,8 +12,8 @@ import * as tilted from '../assets/tilted2.png';
 
 const SJumbotron = styled.div`
 	text-align: center !important;
-	padding-top: 16% !important;
-	padding-bottom: 21% !important;
+	padding-top: 15% !important;
+	padding-bottom: 15% !important;
 	color: #eee !important;
 	z-index: 10000;
 	background: #011126 url(${bg}) no-repeat center !important;
@@ -65,8 +65,8 @@ const SWhoWeAre = styled.div`
 	/* box-shadow: 0 4px 10px -6px #eee !important; */
 	text-align: center;
 
-	padding-top: 70px;
-	padding-bottom: 70px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 
 	& img {
 		position: relative;

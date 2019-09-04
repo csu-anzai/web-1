@@ -14,7 +14,7 @@ const SWhite = styled.div`
 `;
 
 const SItem = styled.div`
-	padding: 100px 150px;
+	padding: 50px 150px;
 	width: 100%;
 `;
 
@@ -25,9 +25,9 @@ const SImageColumn = styled(Grid.Column)`
 `;
 
 const SGrey = styled.div`
+	padding-bottom: 50px !important;
 	background: #f4f5f7 !important;
 	padding-top: 50px;
-	padding-bottom: 100px;
 	box-shadow: 0 4px 10px -6px #eee !important;
 `;
 
@@ -37,7 +37,7 @@ const Portfolio: React.FC<{}> = () => {
 			<SGrey>
 				<Container fluid={true}>
 					<SItem>
-						<Grid columns={'equal'}>
+						<Grid stackable={true} columns={'equal'}>
 							<SImageColumn
 								textAlign="center"
 								verticalAlign={'middle'}
@@ -98,7 +98,7 @@ const Portfolio: React.FC<{}> = () => {
 			<SWhite>
 				<Container fluid={true}>
 					<SItem>
-						<Grid columns={'equal'}>
+						<Grid stackable={true} columns={'equal'}>
 							<Grid.Column>
 								<Image
 									src={
@@ -158,7 +158,7 @@ const Portfolio: React.FC<{}> = () => {
 			<SGrey>
 				<Container fluid={true}>
 					<SItem>
-						<Grid columns={'equal'}>
+						<Grid stackable={true} columns={'equal'}>
 							<Grid.Column
 								textAlign="center"
 								verticalAlign={'middle'}
